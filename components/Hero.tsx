@@ -201,7 +201,9 @@ export default function Hero() {
               fill
               className="object-cover"
               priority={currentImageIndex === 0}
-              quality={90}
+              quality={100}
+              sizes="100vw"
+              unoptimized={false}
             />
           </motion.div>
         </AnimatePresence>
