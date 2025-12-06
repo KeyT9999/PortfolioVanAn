@@ -53,7 +53,7 @@ export default function Navigation() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className={`text-xl md:text-2xl font-black tracking-wider transition-all duration-300 ${
+            className={`text-lg md:text-xl font-black tracking-wider transition-all duration-300 ${
               isScrolled
                 ? 'px-4 py-2 bg-black text-white rounded-lg shadow-lg border-2 border-gray-200'
                 : 'text-white drop-shadow-[0_0_15px_rgba(0,0,0,0.8)] px-3 py-1 bg-black/40 backdrop-blur-md rounded-lg border border-white/30'

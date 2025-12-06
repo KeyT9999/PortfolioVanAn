@@ -14,11 +14,14 @@ const images = [
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
+  const [isPaused, setIsPaused] = useState(false)
   const touchStartX = useRef<number | null>(null)
   const touchEndX = useRef<number | null>(null)
   const mouseStartX = useRef<number | null>(null)
   const mouseEndX = useRef<number | null>(null)
   const isDragging = useRef(false)
+  const autoPlayInterval = useRef<NodeJS.Timeout | null>(null)
 
   const scrollToPortfolio = () => {
     const portfolioSection = document.getElementById('portfolio')
@@ -27,6 +30,9 @@ export default function Hero() {
 
   const handleImageChange = (imageIndex: number) => {
     setCurrentImageIndex(imageIndex)
+    // Pause auto-play when user manually changes image
+    setIsPaused(true)
+    setTimeout(() => setIsPaused(false), 5000) // Resume after 5s
   }
 
   const nextImage = () => {
@@ -37,8 +43,34 @@ export default function Hero() {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
   }
 
+  // Auto-play functionality
+  useEffect(() => {
+    // Don't auto-play if hovered, paused, or dragging
+    if (isHovered || isPaused || isDragging.current) {
+      if (autoPlayInterval.current) {
+        clearInterval(autoPlayInterval.current)
+        autoPlayInterval.current = null
+      }
+      return
+    }
+
+    // Set up auto-play interval (5 seconds)
+    autoPlayInterval.current = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length)
+    }, 5000)
+
+    // Cleanup on unmount or when dependencies change
+    return () => {
+      if (autoPlayInterval.current) {
+        clearInterval(autoPlayInterval.current)
+        autoPlayInterval.current = null
+      }
+    }
+  }, [currentImageIndex, isHovered, isPaused])
+
   // Swipe/Touch handlers
   const handleTouchStart = (e: React.TouchEvent) => {
+    setIsPaused(true)
     touchStartX.current = e.touches[0].clientX
   }
 
@@ -47,7 +79,10 @@ export default function Hero() {
   }
 
   const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return
+    if (!touchStartX.current || !touchEndX.current) {
+      setTimeout(() => setIsPaused(false), 3000)
+      return
+    }
 
     const distance = touchStartX.current - touchEndX.current
     const minSwipeDistance = 50
@@ -62,6 +97,7 @@ export default function Hero() {
 
     touchStartX.current = null
     touchEndX.current = null
+    setTimeout(() => setIsPaused(false), 5000) // Resume after 5s
   }
 
   // Mouse drag handlers
@@ -76,6 +112,7 @@ export default function Hero() {
     ) {
       return
     }
+    setIsPaused(true)
     isDragging.current = true
     mouseStartX.current = e.clientX
   }
@@ -88,6 +125,7 @@ export default function Hero() {
   const handleMouseUp = () => {
     if (!isDragging.current || !mouseStartX.current || !mouseEndX.current) {
       isDragging.current = false
+      setTimeout(() => setIsPaused(false), 3000)
       return
     }
 
@@ -105,21 +143,27 @@ export default function Hero() {
     mouseStartX.current = null
     mouseEndX.current = null
     isDragging.current = false
+    setTimeout(() => setIsPaused(false), 5000) // Resume after 5s
   }
 
   const handleMouseLeave = () => {
     isDragging.current = false
     mouseStartX.current = null
     mouseEndX.current = null
+    // Note: setIsHovered(false) is handled by section's onMouseLeave
   }
 
   // Keyboard navigation
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
+        setIsPaused(true)
         prevImage()
+        setTimeout(() => setIsPaused(false), 5000)
       } else if (e.key === 'ArrowRight') {
+        setIsPaused(true)
         nextImage()
+        setTimeout(() => setIsPaused(false), 5000)
       }
     }
 
@@ -131,13 +175,14 @@ export default function Hero() {
     <section
       id="home"
       className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden cursor-grab active:cursor-grabbing"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseLeave}
     >
       {/* Background Image with Slide Animation */}
       <div className="absolute inset-0 z-0">
@@ -241,24 +286,40 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Image Indicator */}
+      {/* Image Indicator with Progress */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
         className="absolute bottom-20 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => handleImageChange(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              currentImageIndex === index
-                ? 'bg-white w-8'
-                : 'bg-white/50 hover:bg-white/75'
-            }`}
+            className="relative group"
             aria-label={`Go to image ${index + 1}`}
-          />
+          >
+            <div
+              className={`h-1 rounded-full transition-all ${
+                currentImageIndex === index
+                  ? 'w-8 bg-white'
+                  : 'w-2 bg-white/50 group-hover:bg-white/75'
+              }`}
+            >
+              {currentImageIndex === index && !isHovered && !isPaused && (
+                <motion.div
+                  className="h-full bg-white/30 rounded-full"
+                  initial={{ width: '0%' }}
+                  animate={{ width: '100%' }}
+                  transition={{ duration: 5, ease: 'linear' }}
+                  key={currentImageIndex} // Reset animation when image changes
+                />
+              )}
+            </div>
+          </button>
         ))}
       </motion.div>
 
