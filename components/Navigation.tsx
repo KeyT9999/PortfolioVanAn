@@ -53,9 +53,13 @@ export default function Navigation() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-xl md:text-2xl font-bold"
+            className={`text-xl md:text-2xl font-black tracking-wider transition-all duration-300 ${
+              isScrolled
+                ? 'px-4 py-2 bg-black text-white rounded-lg shadow-lg border-2 border-gray-200'
+                : 'text-white drop-shadow-[0_0_15px_rgba(0,0,0,0.8)] px-3 py-1 bg-black/40 backdrop-blur-md rounded-lg border border-white/30'
+            }`}
           >
-            TRƯƠNG HẢI
+            TRƯỜNG HẢI
           </motion.div>
 
           {/* Desktop Menu */}
@@ -70,17 +74,23 @@ export default function Navigation() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`text-sm font-medium transition-colors relative ${
-                    isActive
-                      ? 'text-black font-semibold'
-                      : 'text-gray-600 hover:text-black'
+                  className={`text-sm font-bold transition-all duration-300 relative px-4 py-2 rounded-md ${
+                    isScrolled
+                      ? isActive
+                        ? 'text-white bg-black shadow-md'
+                        : 'text-gray-700 hover:text-black hover:bg-gray-100 hover:shadow-sm'
+                      : isActive
+                      ? 'text-white bg-white/20 backdrop-blur-sm shadow-lg border border-white/30'
+                      : 'text-white/90 hover:text-white hover:bg-white/10 hover:backdrop-blur-sm border border-transparent hover:border-white/20'
                   }`}
                 >
                   {item.name}
                   {isActive && (
                     <motion.div
                       layoutId="activeSection"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-black"
+                      className={`absolute -bottom-1 left-0 right-0 h-0.5 ${
+                        isScrolled ? 'bg-black' : 'bg-white'
+                      }`}
                       initial={false}
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
@@ -92,7 +102,9 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className={`md:hidden p-2 transition-colors ${
+              isScrolled ? 'text-black' : 'text-white'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >

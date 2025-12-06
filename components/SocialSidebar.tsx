@@ -19,7 +19,7 @@ const socialLinks = [
   {
     name: 'Instagram',
     icon: Instagram,
-    href: '#',
+    href: 'https://www.instagram.com/lil.crison/',
     color: 'hover:text-pink-500',
   },
   {

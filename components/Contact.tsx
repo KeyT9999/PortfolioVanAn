@@ -73,60 +73,7 @@ export default function Contact() {
             <p className="text-sm text-gray-600 text-center">036.460.5132</p>
           </motion.a>
         </motion.div>
-
-        {/* Contact Form */}
-        <motion.form
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 space-y-6"
-          onSubmit={(e) => {
-            e.preventDefault()
-            // Handle form submission
-          }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
-              type="text"
-              placeholder="Tên của bạn"
-              className="px-4 py-3 border-2 border-gray-200 focus:border-black outline-none transition-colors"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="px-4 py-3 border-2 border-gray-200 focus:border-black outline-none transition-colors"
-              required
-            />
-          </div>
-          <textarea
-            placeholder="Tin nhắn của bạn"
-            rows={6}
-            className="w-full px-4 py-3 border-2 border-gray-200 focus:border-black outline-none transition-colors resize-none"
-            required
-          />
-          <motion.button
-            type="submit"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full md:w-auto px-12 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors"
-          >
-            GỬI TIN NHẮN
-          </motion.button>
-        </motion.form>
       </div>
-
-      {/* Footer */}
-      <motion.footer
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-        className="mt-20 text-center text-gray-600 text-sm"
-      >
-        <p>© 2024 TRƯƠNG HẢI | Portfolio for Media Intern</p>
-      </motion.footer>
     </section>
   )
 }

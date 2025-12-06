@@ -118,9 +118,9 @@ export default function About() {
               </div>
             </div>
 
-            {/* Portfolio Link */}
+            {/* CV Link */}
             <motion.a
-              href="https://www.behance.net/crison"
+              href="/CV_Đoàn Phước Trường Hải_Media Intern.pdf"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -128,7 +128,7 @@ export default function About() {
               className="flex items-center gap-3 bg-black text-white p-4 hover:bg-gray-800 transition-colors"
             >
               <ExternalLink className="w-5 h-5" />
-              <span className="font-medium">Xem Portfolio trên Behance</span>
+              <span className="font-medium">XEM CV</span>
             </motion.a>
           </motion.div>
         </div>
