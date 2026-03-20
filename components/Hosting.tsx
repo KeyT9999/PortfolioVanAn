@@ -132,7 +132,7 @@ export default function Hosting() {
         <div className="max-w-2xl mx-auto py-24 border-y border-outline-variant/15">
           <h2 className="font-headline text-5xl mb-8">Elevate Your Next <i className="italic">Production.</i></h2>
           <p className="text-on-surface-variant mb-12">Available for international booking, corporate emceeing, and keynote hosting.</p>
-          <button className="gold-shimmer text-white px-12 py-4 rounded-sm font-semibold tracking-[0.1em] uppercase text-xs hover:shadow-xl transition-shadow">
+          <button className="blue-shimmer text-white px-12 py-4 rounded-sm font-semibold tracking-[0.1em] uppercase text-xs hover:shadow-xl transition-shadow">
             Request Availability
           </button>
         </div>

@@ -36,11 +36,11 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
-  .hero-gradient { background: linear-gradient(135deg, #775a19 0%, #c5a059 100%); }
-  .bg-silk-gradient { background: linear-gradient(135deg, #775a19 0%, #c5a059 100%); }
+  .hero-gradient { background: linear-gradient(135deg, #0a4275 0%, #6ba3d6 100%); }
+  .bg-ocean-gradient { background: linear-gradient(135deg, #0a4275 0%, #6ba3d6 100%); }
   .editorial-shadow { box-shadow: 0 20px 40px rgba(28, 28, 24, 0.05); }
   .glass-header { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
-  .gold-shimmer { background: linear-gradient(135deg, #775a19 0%, #c5a059 100%); }
+  .blue-shimmer { background: linear-gradient(135deg, #0a4275 0%, #6ba3d6 100%); }
   
   .animate-slide-up {
     animation: slide-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;

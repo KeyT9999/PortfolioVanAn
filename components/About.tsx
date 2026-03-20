@@ -84,7 +84,7 @@ export default function About() {
       {/* Signature Hospitality Quote */}
       <div className="py-48 bg-surface relative overflow-hidden flex justify-center items-center -mx-12 mt-16">
         <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <div className="w-full h-full" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, #775a19 1px, transparent 0)", backgroundSize: "40px 40px" }}></div>
+          <div className="w-full h-full" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, #0a4275 1px, transparent 0)", backgroundSize: "40px 40px" }}></div>
         </div>
         <div className="relative z-10 max-w-4xl text-center px-6">
           <span className="material-symbols-outlined text-primary text-3xl mb-8" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>

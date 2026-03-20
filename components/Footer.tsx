@@ -9,7 +9,7 @@ export default function Footer() {
           <a className="text-[#1c1c18] dark:text-[#f3f0ea] hover:tracking-widest transition-all duration-500" href="#">Facebook</a>
           <a className="text-[#1c1c18] dark:text-[#f3f0ea] hover:tracking-widest transition-all duration-500" href="#">Contact</a>
         </div>
-        <p className="font-sans uppercase tracking-[0.1rem] text-xs text-[#775a19] dark:text-[#c5a059] mt-8">
+        <p className="font-sans uppercase tracking-[0.1rem] text-xs text-[#0a4275] dark:text-[#6ba3d6] mt-8">
           © 2024 Vân An. Where the heart is, there lies the treasure.
         </p>
       </div>
