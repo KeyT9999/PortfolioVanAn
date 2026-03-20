@@ -7,7 +7,7 @@ export default function Media() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-7">
             <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary mb-6 block">Spotlight Production</span>
-            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-[1.1] mb-8 tracking-tighter">
+            <h1 className="font-headline text-5xl lg:text-7xl md:text-5xl lg:text-8xl leading-[1.1] mb-8 tracking-tighter">
               Người Gieo <br/><span className="italic font-normal">Mầm Xanh</span>
             </h1>
             <div className="flex flex-wrap gap-8 items-center mb-12">
@@ -100,7 +100,7 @@ export default function Media() {
           <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary mb-4 block">The Outcomes</span>
           <h2 className="font-headline text-4xl md:text-5xl">Quantifying Excellence</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-outline-variant/20">
           <div className="bg-surface py-16 px-8 text-center group transition-colors hover:bg-surface-container-low">
             <span className="material-symbols-outlined text-primary-container text-3xl mb-6 block">visibility</span>
             <div className="font-headline text-5xl mb-2">18K+</div>

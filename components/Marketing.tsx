@@ -6,7 +6,7 @@ export default function Marketing() {
         <div className="flex flex-col md:flex-row items-end gap-12">
           <div className="w-full md:w-2/3">
             <span className="font-label uppercase tracking-[0.2rem] text-primary text-xs mb-4 block">Operations &amp; Marketing</span>
-            <h1 className="font-headline text-5xl md:text-7xl font-bold text-on-surface leading-tight tracking-tighter">
+            <h1 className="font-headline text-5xl lg:text-7xl md:text-5xl font-bold text-on-surface leading-tight tracking-tighter">
               Case Study: F&amp;B Strategic Leadership
             </h1>
             <p className="mt-8 text-xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
@@ -25,9 +25,9 @@ export default function Marketing() {
 
       {/* Bento Grid: Data & Analytics */}
       <div className="px-12 max-w-[1920px] mx-auto mb-32">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Page Growth Card */}
-          <div className="md:col-span-4 bg-surface-container-low p-10 rounded-lg flex flex-col justify-between h-[400px]">
+          <div className="lg:col-span-4 bg-surface-container-low p-10 rounded-lg flex flex-col justify-between h-[400px]">
             <div>
               <span className="material-symbols-outlined text-primary mb-6" style={{ fontSize: "40px" }}>trending_up</span>
               <h3 className="font-headline text-2xl mb-2">Audience Expansion</h3>
@@ -43,7 +43,7 @@ export default function Marketing() {
           </div>
           
           {/* Zalo Ecosystem Card */}
-          <div className="md:col-span-4 bg-on-surface text-surface-container-lowest p-10 rounded-lg flex flex-col justify-between h-[400px]">
+          <div className="lg:col-span-4 bg-on-surface text-surface-container-lowest p-10 rounded-lg flex flex-col justify-between h-[400px]">
             <div>
               <span className="material-symbols-outlined text-primary-container mb-6" style={{ fontSize: "40px" }}>hub</span>
               <h3 className="font-headline text-2xl mb-2">Zalo Ecosystem</h3>
@@ -56,7 +56,7 @@ export default function Marketing() {
           </div>
           
           {/* Strategic Image/Visual */}
-          <div className="md:col-span-4 rounded-lg overflow-hidden relative group">
+          <div className="lg:col-span-4 rounded-lg overflow-hidden relative group">
             <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/589097267_4218047968409498_904782228036059533_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeHFiIfUeCQZiYIyClxo0wJ1kQRHy7tbjl-RBEfLu1uOX7uIp40ADT9mWDdcdm0_Kn-B9kwuZczI47NllnWRPuGj&_nc_ohc=yv-bqMP_O5UQ7kNvwEQjfZs&_nc_oc=AdqBiBWkB4Fe6jAwuC5C6TJ0O5IVNK8JEz4959AH8pOWX43XClXNz_VMlEa7TV6Gs9s&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=raMeZ6_jrqY-oLN-K-qoWA&_nc_ss=7a30f&oh=00_AfzwkKh_BGJ1K03DKHiVCRvqCr5NXm94myrmeouShTFyFQ&oe=69C29573" alt="Modern high-end restaurant team meeting in warm lighting"/>
             <div className="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
             <div className="absolute bottom-8 left-8 right-8">
@@ -79,7 +79,7 @@ export default function Marketing() {
                 &quot;Marketing is not just about visibility; it is the art of engineering desire through operational excellence.&quot;
               </p>
             </div>
-            <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="w-full md:w-2/3 grid grid-cols-1 lg:grid-cols-3 gap-12">
               <div>
                 <div className="w-12 h-12 flex items-center justify-center bg-surface-container-highest mb-6">
                   <span className="material-symbols-outlined text-primary">workspace_premium</span>

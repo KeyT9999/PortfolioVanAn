@@ -4,17 +4,17 @@ export default function Research() {
     <section id="research" className="pt-32 pb-24">
       {/* Hero Research Header */}
       <div className="px-12 max-w-7xl mx-auto mb-32">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-          <div className="md:col-span-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div className="lg:col-span-8">
             <div className="font-label text-xs uppercase tracking-[0.2rem] text-primary mb-6">Tầm nhìn công nghệ</div>
-            <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-8">AI &amp; AEO in Tourism.</h1>
+            <h1 className="font-serif text-5xl lg:text-7xl md:text-5xl font-bold leading-tight mb-8">AI &amp; AEO in Tourism.</h1>
             <div className="flex items-center gap-4 mb-12">
               <span className="px-3 py-1 bg-surface-container-high rounded-sm text-[10px] uppercase tracking-widest border border-outline-variant/20 font-medium">Research Finalist</span>
               <div className="h-[1px] w-24 bg-outline-variant/30"></div>
               <span className="text-sm font-light italic text-on-surface-variant">2024 Industry Intelligence Report</span>
             </div>
           </div>
-          <div className="md:col-span-4 pb-4">
+          <div className="lg:col-span-4 pb-4">
             <p className="text-lg text-on-surface-variant leading-relaxed italic border-l-2 border-primary/20 pl-8">
               Exploring the nexus of human trust and algorithmic precision in the future of global hospitality.
             </p>
@@ -24,7 +24,7 @@ export default function Research() {
 
       {/* Insights Grid (Asymmetric Layout) */}
       <div className="px-12 max-w-7xl mx-auto mb-40">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div className="space-y-16">
             <div className="bg-surface-container-low p-12 rounded-sm border-l border-primary/10">
               <div className="flex items-center gap-3 mb-6">
@@ -78,8 +78,8 @@ export default function Research() {
 
       {/* Methodology Section */}
       <div className="bg-surface-container-low py-32 px-12 border-y border-outline-variant/10 mb-32">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
-          <div className="md:col-span-1">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
+          <div className="lg:col-span-1">
             <h2 className="font-serif text-4xl mb-6">Academic Integrity.</h2>
             <p className="text-on-surface-variant mb-8">
               Our research methodology combines quantitative data from global hospitality aggregators with qualitative depth-interviews from industry leaders.
@@ -89,7 +89,7 @@ export default function Research() {
               <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
             </button>
           </div>
-          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div className="space-y-4">
               <div className="h-1 w-8 bg-primary"></div>
               <h4 className="font-label text-sm font-bold uppercase tracking-widest">Phase I: Collection</h4>

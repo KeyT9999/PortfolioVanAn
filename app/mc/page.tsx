@@ -12,11 +12,11 @@ export default function MCPage() {
       <Navigation title="MC Vân An" />
 
       {/* Section 1: Intro */}
-      <section className="px-6 md:px-24 mb-32">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
-          <div className="md:col-span-7">
+      <section className="px-6 md:px-12 lg:px-24 mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+          <div className="lg:col-span-7">
             <span className="font-label text-xs uppercase tracking-[0.3em] text-[#0a4275] mb-6 block">The Curated Host</span>
-            <h1 className="font-serif text-6xl md:text-8xl text-[#1c1c18] leading-tight mb-8">
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#1c1c18] leading-tight mb-8">
               MC <span className="italic font-normal">VÂN AN</span>
             </h1>
             <div className="max-w-xl space-y-6 text-[#4e4639] leading-relaxed text-lg">
@@ -33,11 +33,11 @@ export default function MCPage() {
               </div>
             </div>
           </div>
-          <div className="md:col-span-5 relative">
+          <div className="lg:col-span-5 relative mt-16 lg:mt-0">
             <div className="aspect-[3/4] bg-[#f0eee8] overflow-hidden rounded-sm">
               <img className="w-full h-full object-cover" alt="Professional MC portrait" src={encodeURI('/Ảnh đẹp để giới thiệu/IMG_5511.JPG')}/>
             </div>
-            <div className="absolute -bottom-8 -left-8 p-8 bg-[#fcf9f3] shadow-sm border border-[#d1c5b4]/10 max-w-[280px]">
+            <div className="absolute -bottom-8 lg:-bottom-8 left-0 lg:-left-8 p-6 lg:p-8 bg-[#fcf9f3] shadow-sm border border-[#d1c5b4]/10 max-w-[280px]">
               <p className="font-serif italic text-[#1c1c18] mb-2">Giá trị cốt lõi</p>
               <p className="text-sm text-[#4e4639]">Lắng nghe, thấu hiểu, dẫn dắt cảm xúc, biến áp lực thành năng lượng.</p>
             </div>
@@ -49,9 +49,9 @@ export default function MCPage() {
       </section>
 
       {/* Section 2: Personal Info & Education */}
-      <section className="bg-[#f6f3ed] py-32 px-6 md:px-24">
+      <section className="bg-[#f6f3ed] py-32 px-6 md:px-12 lg:px-24">
         <div className="max-w-screen-2xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div>
               <h2 className="font-serif text-4xl mb-12">Profile &amp; <span className="italic">Expertise</span></h2>
               <div className="space-y-12">
@@ -82,7 +82,7 @@ export default function MCPage() {
               </div>
             </div>
             
-            <div className="bg-[#e5e2dc] p-12 rounded-sm">
+            <div className="bg-[#e5e2dc] p-8 md:p-12 rounded-sm">
               <h3 className="font-serif text-2xl mb-6">Kỹ năng sân khấu</h3>
               <p className="text-[#4e4639] mb-8 leading-relaxed">
                 Phong thái sân khấu bài bản được trui rèn qua nhiều môi trường chuyên nghiệp. Khả năng xử lý tình huống linh hoạt và kinh nghiệm dẫn dắt đa dạng các loại hình sự kiện từ trang trọng đến nghệ thuật.
@@ -107,29 +107,29 @@ export default function MCPage() {
       </section>
 
       {/* Section 3: Projects Showcase (Updated to 12 projects) */}
-      <section className="py-32 px-6 md:px-24 max-w-screen-2xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+      <section className="py-32 px-6 md:px-12 lg:px-24 max-w-screen-2xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 lg:mb-20 gap-8">
           <div>
             <span className="font-label text-xs uppercase tracking-[0.3em] text-[#0a4275] mb-4 block">Portfolio</span>
-            <h2 className="font-serif text-5xl italic">Dự án tiêu biểu</h2>
+            <h2 className="font-serif text-4xl md:text-5xl italic">Dự án tiêu biểu</h2>
           </div>
           <p className="max-w-sm text-[#4e4639] text-sm leading-relaxed">Những khoảnh khắc rực rỡ trên sân khấu, nơi thông điệp được lan tỏa và cảm xúc được thăng hoa qua từng chương trình.</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 lg:gap-y-16">
           {projects.map((project, index) => (
             <div key={index} className="group">
               <div className="aspect-[4/3] overflow-hidden mb-6 bg-[#f0eee8]">
                 <img 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105" 
+                  className="w-full h-full object-cover grayscale md:hover:grayscale-0 transition-all duration-700 md:group-hover:scale-105" 
                   alt={project.title} 
                   src={project.image} 
                 />
               </div>
               <div className="space-y-3">
-                <h3 className="font-serif text-2xl text-[#1c1c18]">{project.title}</h3>
+                <h3 className="font-serif text-xl md:text-2xl text-[#1c1c18]">{project.title}</h3>
                 <p className="text-sm text-[#4e4639] italic font-serif">{project.role}</p>
-                <Link className="inline-flex items-center text-xs uppercase tracking-widest font-label text-[#0a4275] hover:text-[#0a4275] transition-colors pt-2" href={`/mc/project/${project.slug}`}>
+                <Link className="inline-flex items-center text-xs uppercase tracking-widest font-label text-[#0a4275] hover:opacity-70 transition-opacity pt-2" href={`/mc/project/${project.slug}`}>
                   View Details <span className="material-symbols-outlined text-[14px] ml-2">north_east</span>
                 </Link>
               </div>
@@ -139,7 +139,7 @@ export default function MCPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-slate-900 text-stone-100 text-center px-6">
+      <section className="py-24 lg:py-32 bg-slate-900 text-stone-100 text-center px-6">
         <span className="font-label text-xs uppercase tracking-[0.4em] text-sky-400 mb-6 block">Ready to Collaborate?</span>
         <h2 className="font-serif text-5xl md:text-6xl mb-12">Hãy cùng tạo nên những <br/><span className="italic font-normal">khoảnh khắc đáng nhớ.</span></h2>
         <a href="https://www.facebook.com/vanan.nguyenthuy.1" target="_blank" rel="noopener noreferrer" className="blue-shimmer inline-block text-white px-12 py-4 rounded-sm font-semibold tracking-widest text-sm hover:opacity-90 transition-all transform hover:-translate-y-1">

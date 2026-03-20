@@ -4,14 +4,14 @@ export default function Hosting() {
     <section id="hosting" className="pt-32 mb-32">
       {/* Hero Section: Mastery Statement */}
       <div className="px-6 md:px-12 mb-32 max-w-[1920px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
-          <div className="md:col-span-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+          <div className="lg:col-span-8">
             <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary mb-4 block">Bản lĩnh sân khấu</span>
-            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-none mb-8">
+            <h1 className="font-headline text-5xl lg:text-7xl md:text-5xl lg:text-8xl tracking-tighter leading-none mb-8">
               4 Years of <br/><i className="font-serif italic">Mastery.</i>
             </h1>
           </div>
-          <div className="md:col-span-4 pb-4">
+          <div className="lg:col-span-4 pb-4">
             <p className="text-on-surface-variant text-lg leading-relaxed max-w-sm">
               Commanding stages with a blend of marketing precision and editorial grace. From intimate galas to arena-scale exhibitions.
             </p>
@@ -22,7 +22,7 @@ export default function Hosting() {
       {/* Metric Highlights */}
       <div className="bg-surface-container-low py-24 mb-32">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-24 md:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 md:gap-12">
             <div className="text-center md:text-left">
               <span className="font-headline text-6xl block mb-2 text-primary">4+</span>
               <span className="font-label uppercase tracking-widest text-xs opacity-60">Years Professional Experience</span>
@@ -77,8 +77,8 @@ export default function Hosting() {
 
       {/* Showreel Section: Editorial Focus */}
       <div className="bg-inverse-surface py-32 text-inverse-on-surface mb-32">
-        <div className="max-w-[1920px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-          <div className="md:col-span-4">
+        <div className="max-w-[1920px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-4">
             <h2 className="font-headline text-5xl mb-8 leading-tight">Mastery in <br/><i className="italic">Motion.</i></h2>
             <p className="opacity-70 text-lg mb-12">Watch the 2-minute summary of the 2023 Performance Season. A curation of voice, posture, and presence.</p>
             <a className="inline-flex items-center gap-4 group" href="#">
@@ -86,7 +86,7 @@ export default function Hosting() {
               <span className="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
             </a>
           </div>
-          <div className="md:col-span-8">
+          <div className="lg:col-span-8">
             <div className="relative aspect-video bg-stone-800 rounded-sm overflow-hidden shadow-2xl">
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-tr from-stone-900 to-transparent">
                 <img alt="Showreel Thumbnail" className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40" src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/501039028_1202355758252309_6343487756814000815_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFf5eSC-HbfiX90bvQUIJ5ApXXsBwFRTI-ldewHAVFMjyn8QJ7qFaYvuawSeaNBcVPaW9zkJQ3h2DMURQWwluFp&_nc_ohc=_AR6_ex9cw0Q7kNvwGAj2Li&_nc_oc=AdrfExCOSNumuqg1goiVGKroA3d6aVydGtg1NHf2Z5ADHqygDyuXRNI0H2zfY9n3l3w&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=nlUcIQf9-ounpOMZRESZKQ&_nc_ss=7a30f&oh=00_AfwNOHh9A86EfSm77-isN4QqOAqlPlrLNZqqw8pzmL0WZg&oe=69C28A9D"/>
@@ -111,8 +111,8 @@ export default function Hosting() {
             <p className="text-on-surface-variant max-w-xs text-sm italic">&quot;The stage is not just a platform; it's a sacred space of connection.&quot;</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="md:col-span-2 md:row-span-2 aspect-square md:aspect-auto overflow-hidden bg-surface-container-low">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <div className="lg:col-span-2 md:row-span-2 aspect-square md:aspect-auto overflow-hidden bg-surface-container-low">
             <img alt="Tech Conference" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/607076567_1377902420697641_6788106196815912713_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFClmO-1KtLSKE2mQnstlimV-FGjKBzEddX4UaMoHMR16eBE682Z1U9e-Lb7iz_nTd1pii2AJji_qa7pE7IS4SG&_nc_ohc=Mf76X8_M_YoQ7kNvwGAtnPc&_nc_oc=Adoxox1yQjHru15PWZ06yhAXToc-YEjJnmJG7DljRdql1MzW-O6BE_a91yMgLQDvOFY&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=J4B6vo_JE6gUKX9A0Ojk0Q&_nc_ss=7a30f&oh=00_AfxkdwZPvvdZNgN3AutMV-fOCOkjZ43Bu5GR1H_u7po-zg&oe=69C2744A"/>
           </div>
           <div className="aspect-square overflow-hidden bg-surface-container-low">
@@ -121,7 +121,7 @@ export default function Hosting() {
           <div className="aspect-square overflow-hidden bg-surface-container-low">
             <img alt="Outdoor Gala" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/606141761_1377866870701196_7022180937168848850_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeE5Y7UKvOKKpX5bZdL9Q2zlLdrY8oq76_4t2tjyirvr_qucvKk4MdR3g_7GZaq6Xqvw2h18zXoMZoJqsw9Qg-OW&_nc_ohc=1PqK9pEPZZcQ7kNvwE-Vcic&_nc_oc=Adr_EpLZMghPy_Lzp1IAdPlZ_0BKgTQr-Yu9-wDOR9yFNIoFKBUCO1N1MCseiHeOwe0&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=ezQafP-KTHBn2rT3CBLcVQ&_nc_ss=7a30f&oh=00_AfzgkAfS_pFrz9XP7xLzFpez1_nFv2b1cNboqBR2UtAUwA&oe=69C2998B"/>
           </div>
-          <div className="md:col-span-2 aspect-video md:aspect-auto overflow-hidden bg-surface-container-low">
+          <div className="lg:col-span-2 aspect-video md:aspect-auto overflow-hidden bg-surface-container-low">
             <img alt="Music Event" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/605531383_1377559400731943_9108653410773346440_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHQo4UmgoYXzhf_QmzBNcivAvqrURSFbMoC-qtRFIVsyjkj5OltA01hsEtzhDHGqoJWFdbJc3qyVVJ0GkCnb8a5&_nc_ohc=fo-P4TT6ugQQ7kNvwHu3EXL&_nc_oc=AdpjaHWolNAtW1EtD55g3LMKTlGWflA-nvjXqYPjibhdZG34Cz0CxmSypbXdi4_NnnU&_nc_zt=23&_nc_ht=scontent.fsgn2-9.fna&_nc_gid=_iFu5zkYEx1ysYSdcEikyA&_nc_ss=7a30f&oh=00_AfxrwzX-_8v9mCuTZuS1DlUWDbNmYzJXRpKow8Cat8ZQ8A&oe=69C28265"/>
           </div>
         </div>

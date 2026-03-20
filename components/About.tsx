@@ -3,10 +3,10 @@ export default function About() {
   return (
     <section id="about" className="max-w-[1920px] mx-auto px-12 py-24 mb-32">
       {/* Hero Section: Intentional Asymmetry */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-32">
-        <div className="md:col-span-7 relative">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-32">
+        <div className="lg:col-span-7 relative">
           <div className="font-label uppercase tracking-[0.2rem] text-primary mb-6">Our Philosophy</div>
-          <h1 className="font-headline text-6xl md:text-8xl text-on-surface leading-[1.1] tracking-tight">
+          <h1 className="font-headline text-6xl lg:text-8xl md:text-6xl text-on-surface leading-[1.1] tracking-tight">
             Trái tim <br/> <span className="italic font-normal font-serif ml-12 md:ml-24">&amp; Trí tuệ</span>
           </h1>
           <div className="mt-16 max-w-xl">
@@ -15,7 +15,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="md:col-span-5 relative group">
+        <div className="lg:col-span-5 relative group">
           <div className="aspect-[4/5] overflow-hidden rounded-sm bg-surface-container-high editorial-shadow p-2">
             <img className="w-full h-full object-cover rounded-sm filter grayscale hover:grayscale-0 transition-all duration-700" src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/501039028_1202355758252309_6343487756814000815_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFf5eSC-HbfiX90bvQUIJ5ApXXsBwFRTI-ldewHAVFMjyn8QJ7qFaYvuawSeaNBcVPaW9zkJQ3h2DMURQWwluFp&_nc_ohc=_AR6_ex9cw0Q7kNvwGAj2Li&_nc_oc=AdrfExCOSNumuqg1goiVGKroA3d6aVydGtg1NHf2Z5ADHqygDyuXRNI0H2zfY9n3l3w&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=nlUcIQf9-ounpOMZRESZKQ&_nc_ss=7a30f&oh=00_AfwNOHh9A86EfSm77-isN4QqOAqlPlrLNZqqw8pzmL0WZg&oe=69C28A9D" alt="Professional MC in elegant suit holding a microphone" />
           </div>
@@ -29,7 +29,7 @@ export default function About() {
       {/* Narrative Section: Tonal Layering */}
       <div className="bg-surface-container-low py-32 px-6 md:px-12 -mx-12 mb-32">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             <div className="space-y-12">
               <div className="space-y-4">
                 <h2 className="font-headline text-3xl text-on-surface">The MC's Charisma</h2>
@@ -62,7 +62,7 @@ export default function About() {
           <span className="font-label uppercase tracking-[0.2rem] text-primary">Core Pillars</span>
           <h2 className="font-headline text-4xl mt-4">The Foundation of Excellence</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="bg-surface-container-lowest p-12 rounded-sm border border-outline-variant/10 hover:bg-surface-container-high transition-colors duration-500">
             <span className="material-symbols-outlined text-primary text-5xl mb-8">temp_preferences_custom</span>
             <h3 className="font-headline text-2xl mb-4">Refined Focus</h3>

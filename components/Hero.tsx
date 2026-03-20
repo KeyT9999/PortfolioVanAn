@@ -2,12 +2,12 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-center pt-24 overflow-hidden mb-32">
       {/* Asymmetrical Grid Container */}
-      <div className="max-w-[1920px] mx-auto w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <div className="max-w-[1920px] mx-auto w-full px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Content Column */}
-        <div className="md:col-span-6 z-10 flex flex-col items-start gap-8">
+        <div className="lg:col-span-6 z-10 flex flex-col items-start gap-8">
           <div className="space-y-4">
             <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary font-medium">Portfolio Vol. 1</span>
-            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface leading-[1.1] tracking-tight">
+            <h1 className="font-headline text-5xl lg:text-7xl md:text-5xl lg:text-8xl text-on-surface leading-[1.1] tracking-tight">
               Where the heart is, there <span className="italic font-normal">lies the treasure</span>.
             </h1>
           </div>
@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
         
         {/* Right Visual Column (Asymmetrical Placement) */}
-        <div className="md:col-span-6 relative mt-12 md:mt-0">
+        <div className="lg:col-span-6 relative mt-12 md:mt-0">
           <div className="relative w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] max-w-2xl ml-auto">
             {/* Main Image Frame */}
             <div className="absolute inset-0 bg-surface-container-low rounded-lg p-2 md:p-4 rotate-2 shadow-2xl overflow-hidden group">
