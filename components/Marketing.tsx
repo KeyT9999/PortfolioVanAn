@@ -111,7 +111,7 @@ export default function Marketing() {
         <div className="max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl md:text-5xl mb-8 leading-tight">Ready to elevate your hospitality project?</h2>
           <div className="flex flex-wrap justify-center gap-6">
-            <button className="luxury-gradient text-white px-10 py-4 rounded-sm font-label font-bold tracking-widest uppercase text-sm">Download Full Case Study</button>
+            <button className="blue-shimmer text-white px-10 py-4 rounded-sm font-label font-bold tracking-widest uppercase text-sm">Download Full Case Study</button>
             <button className="border border-outline-variant px-10 py-4 rounded-sm font-label font-bold tracking-widest uppercase text-sm hover:bg-surface-container transition-colors">Book Consultation</button>
           </div>
         </div>
