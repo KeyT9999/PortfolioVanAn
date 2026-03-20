@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#241a00",
+              "secondary": "#5f5e5e",
+              "surface-bright": "#fcf9f3",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#574500",
+              "inverse-surface": "#31312d",
+              "surface-tint": "#775a19",
+              "error": "#ba1a1a",
+              "inverse-primary": "#e9c176",
+              "on-tertiary-container": "#493900",
+              "outline-variant": "#d1c5b4",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-background": "#1c1c18",
+              "on-surface": "#1c1c18",
+              "secondary-container": "#e4e2e1",
+              "primary-fixed-dim": "#e9c176",
+              "on-error": "#ffffff",
+              "tertiary": "#735c00",
+              "background": "#fcf9f3",
+              "primary": "#775a19",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#e5e2dc",
+              "tertiary-container": "#c5a129",
+              "on-surface-variant": "#4e4639",
+              "tertiary-fixed-dim": "#e9c349",
+              "tertiary-fixed": "#ffe088",
+              "primary-container": "#c5a059",
+              "outline": "#7f7667",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e5e2dc",
+              "surface-container-high": "#ebe8e2",
+              "on-primary-container": "#4e3700",
+              "on-secondary-container": "#656464",
+              "surface-container-low": "#f6f3ed",
+              "on-secondary": "#ffffff",
+              "primary-fixed": "#ffdea5",
+              "surface": "#fcf9f3",
+              "on-tertiary": "#ffffff",
+              "inverse-on-surface": "#f3f0ea",
+              "on-primary-fixed": "#261900",
+              "secondary-fixed": "#e4e2e1",
+              "on-secondary-fixed-variant": "#474747",
+              "surface-dim": "#dcdad4",
+              "surface-container": "#f0eee8",
+              "on-secondary-fixed": "#1b1c1c",
+              "on-primary-fixed-variant": "#5d4201"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .serif-display { font-family: 'Noto Serif', serif; }
+      .sans-label { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f3]/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<div class="font-serif italic text-2xl text-[#1c1c18] dark:text-[#f3f0ea]">The Curated Host</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-serif text-lg tracking-tight text-[#1c1c18] dark:text-[#f3f0ea] opacity-80 hover:opacity-100 hover:text-[#c5a059] transition-colors duration-300" href="#">Home</a>
+<a class="font-serif text-lg tracking-tight text-[#1c1c18] dark:text-[#f3f0ea] opacity-80 hover:opacity-100 hover:text-[#c5a059] transition-colors duration-300" href="#">About</a>
+<a class="font-serif text-lg tracking-tight text-[#1c1c18] dark:text-[#f3f0ea] opacity-80 hover:opacity-100 hover:text-[#c5a059] transition-colors duration-300" href="#">Hosting</a>
+<a class="font-serif text-lg tracking-tight text-[#1c1c18] dark:text-[#f3f0ea] opacity-80 hover:opacity-100 hover:text-[#c5a059] transition-colors duration-300" href="#">Marketing</a>
+<a class="font-serif text-lg tracking-tight text-[#1c1c18] dark:text-[#f3f0ea] opacity-80 hover:opacity-100 hover:text-[#c5a059] transition-colors duration-300" href="#">Media</a>
+<a class="font-serif text-lg tracking-tight text-[#775a19] dark:text-[#c5a059] border-b border-[#775a19] pb-1" href="#">Research</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-2 rounded-sm font-label text-sm font-semibold uppercase tracking-wider hover:scale-95 duration-200 ease-in-out">
+                Inquire
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Research Header -->
+<section class="px-12 max-w-7xl mx-auto mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-8">
+<div class="sans-label text-xs uppercase tracking-[0.2rem] text-primary mb-6">Tầm nhìn công nghệ</div>
+<h1 class="serif-display text-5xl md:text-7xl font-bold leading-tight mb-8">AI &amp; AEO in Tourism.</h1>
+<div class="flex items-center gap-4 mb-12">
+<span class="px-3 py-1 bg-surface-container-high rounded-sm text-[10px] uppercase tracking-widest border border-outline-variant/20 font-medium">Research Finalist</span>
+<div class="h-[1px] w-24 bg-outline-variant/30"></div>
+<span class="text-sm font-light italic text-on-surface-variant">2024 Industry Intelligence Report</span>
+</div>
+</div>
+<div class="md:col-span-4 pb-4">
+<p class="text-lg text-on-surface-variant leading-relaxed italic border-l-2 border-primary/20 pl-8">
+                        Exploring the nexus of human trust and algorithmic precision in the future of global hospitality.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Insights Grid (Asymmetric Layout) -->
+<section class="px-12 max-w-7xl mx-auto mb-40">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div class="space-y-16">
+<div class="bg-surface-container-low p-12 rounded-sm border-l border-primary/10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h3 class="sans-label text-xs uppercase tracking-widest font-semibold">Key Insight</h3>
+</div>
+<h2 class="serif-display text-3xl mb-6">Consumer trust and AI adoption in hospitality.</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                            The paradox of personalization: while travelers crave the efficiency of AI-driven itineraries, the conversion threshold remains tied to the perceived "human touch" and transparency of the curation process.
+                        </p>
+</div>
+<div class="relative group overflow-hidden bg-surface-container-highest aspect-[4/5] rounded-sm">
+<img alt="Futuristic architectural concept" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Abstract architectural lines showing light and shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7vGxSGRaEeSN9LWYEMxnwS4o9jixj7p1bMg43chGulps-6UkQB0WG6C6Sn4VQCdn83d-0G1ObccT_Jcgj7E069aXKwIem4PveIFeD6w2hOyZ_DdvWan3cI_yYu2kAX0ziRLC5pSdpizbZoO59HrqPMSLDenO4JoWE2bTSiogQexKOz8mthbwywvc1l4UUEOK34-ZCgCbPyWlWoqxgjiXU5Jb_iKNutN8ipoG13g4TE0t9EwRUT3AqDioQaAVua2TkOg5KgM9Y8DDY"/>
+<div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-background via-transparent to-transparent w-full">
+<p class="sans-label text-[10px] uppercase tracking-widest opacity-60">Visual Study 01: Digital Architecture</p>
+</div>
+</div>
+</div>
+<div class="md:pt-40 space-y-16">
+<div class="space-y-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">query_stats</span>
+<h3 class="sans-label text-xs uppercase tracking-widest font-semibold">Analysis</h3>
+</div>
+<p class="text-xl serif-display leading-relaxed">
+                            Analysis of customer behavior and technology suggests that AEO (Answer Engine Optimization) is superseding traditional SEO in the travel discovery phase.
+                        </p>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant/15 pt-8">
+<div>
+<div class="text-3xl serif-display text-primary">82%</div>
+<div class="sans-label text-[10px] uppercase tracking-tighter opacity-70">Trust in Human Curation</div>
+</div>
+<div>
+<div class="text-3xl serif-display text-primary">64%</div>
+<div class="sans-label text-[10px] uppercase tracking-tighter opacity-70">AI Interaction Adoption</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-1 border border-outline-variant/10 shadow-sm">
+<img alt="Data visualization chart" class="w-full h-64 object-cover" data-alt="Clean minimalist data visualization on digital tablet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwIewINN4ojhXAAQwVRpJF2cz9ij9GFDoa_O5mMi5ZiT_SgtKkdsiBRVkguXycavjzAosblFpoyLxvRvADSknNoGAQLD6SuVYtZ6wPWC1gnTIIrRnsMLI_8s5vG1Yr-HS3sxKc1JC5_fbfwIL9I11cfxQz60gspbz4R0clcNcdbS658xxdYAC982oSeMjT-O5XbOAz13RskyJythQ_UTWcyY--5h32C3vEMw-RcHpsC5m--H-bVxbO5_AFkUsHFxjFJ6WWya_6Whj4"/>
+<div class="p-6">
+<h4 class="serif-display text-lg mb-2">Technological Integration</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Monitoring the shift from keyword-based searches to conversational intent mapping in luxury travel segments.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Methodology Section -->
+<section class="bg-surface-container-low py-32 px-12 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="md:col-span-1">
+<h2 class="serif-display text-4xl mb-6">Academic Integrity.</h2>
+<p class="text-on-surface-variant mb-8">
+                        Our research methodology combines quantitative data from global hospitality aggregators with qualitative depth-interviews from industry leaders.
+                    </p>
+<button class="flex items-center gap-2 text-primary font-semibold tracking-wide group">
+<span class="sans-label text-xs uppercase">Download Abstract</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+<div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="h-1 w-8 bg-primary"></div>
+<h4 class="sans-label text-sm font-bold uppercase tracking-widest">Phase I: Collection</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed opacity-80">Aggregation of search intent data across major OTAs and emerging AI answer engines to identify divergence in user journey patterns.</p>
+</div>
+<div class="space-y-4">
+<div class="h-1 w-8 bg-primary-container"></div>
+<h4 class="sans-label text-sm font-bold uppercase tracking-widest">Phase II: Validation</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed opacity-80">Cross-referencing behavioral datasets with actual booking conversions to isolate the "Confidence Gap" in AI recommendations.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Future Outlook -->
+<section class="px-12 py-40 max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-5xl text-primary/30 mb-8" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h2 class="serif-display text-4xl md:text-5xl italic mb-12 leading-tight">"Innovation in hospitality is not about replacing the host, but empowering them with the wisdom of the machine."</h2>
+<div class="flex justify-center">
+<div class="w-16 h-[1px] bg-outline-variant"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f6f3ed] dark:bg-stone-800 w-full border-t border-[#d1c5b4]/15">
+<div class="flex flex-col items-center gap-8 py-24 px-4 w-full text-center">
+<div class="font-serif italic text-xl text-[#1c1c18] dark:text-[#f3f0ea]">The Curated Host</div>
+<div class="flex gap-8">
+<a class="font-sans uppercase tracking-[0.1rem] text-xs text-[#1c1c18] dark:text-[#f3f0ea] hover:tracking-widest transition-all duration-500" href="#">LinkedIn</a>
+<a class="font-sans uppercase tracking-[0.1rem] text-xs text-[#1c1c18] dark:text-[#f3f0ea] hover:tracking-widest transition-all duration-500" href="#">Instagram</a>
+<a class="font-sans uppercase tracking-[0.1rem] text-xs text-[#1c1c18] dark:text-[#f3f0ea] hover:tracking-widest transition-all duration-500" href="#">Facebook</a>
+<a class="font-sans uppercase tracking-[0.1rem] text-xs text-[#1c1c18] dark:text-[#f3f0ea] hover:tracking-widest transition-all duration-500" href="#">Contact</a>
+</div>
+<p class="font-sans uppercase tracking-[0.1rem] text-xs text-[#775a19] dark:text-[#c5a059] opacity-70">
+                © 2024 The Curated Host. Where the heart is, there lies the treasure.
+            </p>
+</div>
+</footer>
+<!-- Hospitality Toast (Notification) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-2xl bg-inverse-surface text-inverse-on-surface px-8 py-4 rounded-sm flex items-center justify-between shadow-2xl z-[60] opacity-0 translate-y-10 transition-all duration-1000 ease-[cubic-bezier(0.22, 1, 0.36, 1)]" id="researchToast">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">info</span>
+<p class="sans-label text-xs uppercase tracking-widest font-medium">Full research publication available for members</p>
+</div>
+<button class="text-primary-container text-[10px] font-bold uppercase tracking-widest border-b border-primary-container/30">View Now</button>
+</div>
+<script>
+        // Trigger toast after load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const toast = document.getElementById('researchToast');
+                toast.classList.remove('opacity-0', 'translate-y-10');
+                toast.classList.add('opacity-100', 'translate-y-0');
+            }, 2000);
+        });
+    </script>
+</body></html>

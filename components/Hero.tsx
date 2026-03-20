@@ -1,354 +1,56 @@
-'use client'
-
-import { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
-import Image from 'next/image'
-
-const images = [
-  { id: 1, src: '/home/1.jpg' },
-  { id: 2, src: '/home/2.jpg' },
-  { id: 3, src: '/home/3.jpg' },
-  { id: 4, src: '/home/4.jpg' },
-]
-
 export default function Hero() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [isHovered, setIsHovered] = useState(false)
-  const [isPaused, setIsPaused] = useState(false)
-  const touchStartX = useRef<number | null>(null)
-  const touchEndX = useRef<number | null>(null)
-  const mouseStartX = useRef<number | null>(null)
-  const mouseEndX = useRef<number | null>(null)
-  const isDragging = useRef(false)
-  const autoPlayInterval = useRef<NodeJS.Timeout | null>(null)
-
-  const scrollToPortfolio = () => {
-    const portfolioSection = document.getElementById('portfolio')
-    portfolioSection?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const handleImageChange = (imageIndex: number) => {
-    setCurrentImageIndex(imageIndex)
-    // Pause auto-play when user manually changes image
-    setIsPaused(true)
-    setTimeout(() => setIsPaused(false), 5000) // Resume after 5s
-  }
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length)
-  }
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
-  }
-
-  // Auto-play functionality
-  useEffect(() => {
-    // Don't auto-play if hovered, paused, or dragging
-    if (isHovered || isPaused || isDragging.current) {
-      if (autoPlayInterval.current) {
-        clearInterval(autoPlayInterval.current)
-        autoPlayInterval.current = null
-      }
-      return
-    }
-
-    // Set up auto-play interval (5 seconds)
-    autoPlayInterval.current = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length)
-    }, 5000)
-
-    // Cleanup on unmount or when dependencies change
-    return () => {
-      if (autoPlayInterval.current) {
-        clearInterval(autoPlayInterval.current)
-        autoPlayInterval.current = null
-      }
-    }
-  }, [currentImageIndex, isHovered, isPaused])
-
-  // Swipe/Touch handlers
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setIsPaused(true)
-    touchStartX.current = e.touches[0].clientX
-  }
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.touches[0].clientX
-  }
-
-  const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) {
-      setTimeout(() => setIsPaused(false), 3000)
-      return
-    }
-
-    const distance = touchStartX.current - touchEndX.current
-    const minSwipeDistance = 50
-
-    if (distance > minSwipeDistance) {
-      // Swipe left - next image
-      nextImage()
-    } else if (distance < -minSwipeDistance) {
-      // Swipe right - previous image
-      prevImage()
-    }
-
-    touchStartX.current = null
-    touchEndX.current = null
-    setTimeout(() => setIsPaused(false), 5000) // Resume after 5s
-  }
-
-  // Mouse drag handlers
-  const handleMouseDown = (e: React.MouseEvent) => {
-    // Don't start drag if clicking on interactive elements
-    const target = e.target as HTMLElement
-    if (
-      target.tagName === 'A' ||
-      target.tagName === 'BUTTON' ||
-      target.closest('a') ||
-      target.closest('button')
-    ) {
-      return
-    }
-    setIsPaused(true)
-    isDragging.current = true
-    mouseStartX.current = e.clientX
-  }
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging.current) return
-    mouseEndX.current = e.clientX
-  }
-
-  const handleMouseUp = () => {
-    if (!isDragging.current || !mouseStartX.current || !mouseEndX.current) {
-      isDragging.current = false
-      setTimeout(() => setIsPaused(false), 3000)
-      return
-    }
-
-    const distance = mouseStartX.current - mouseEndX.current
-    const minDragDistance = 50
-
-    if (distance > minDragDistance) {
-      // Drag left - next image
-      nextImage()
-    } else if (distance < -minDragDistance) {
-      // Drag right - previous image
-      prevImage()
-    }
-
-    mouseStartX.current = null
-    mouseEndX.current = null
-    isDragging.current = false
-    setTimeout(() => setIsPaused(false), 5000) // Resume after 5s
-  }
-
-  const handleMouseLeave = () => {
-    isDragging.current = false
-    mouseStartX.current = null
-    mouseEndX.current = null
-    // Note: setIsHovered(false) is handled by section's onMouseLeave
-  }
-
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') {
-        setIsPaused(true)
-        prevImage()
-        setTimeout(() => setIsPaused(false), 5000)
-      } else if (e.key === 'ArrowRight') {
-        setIsPaused(true)
-        nextImage()
-        setTimeout(() => setIsPaused(false), 5000)
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyPress)
-    return () => window.removeEventListener('keydown', handleKeyPress)
-  }, [])
-
   return (
-    <section
-      id="home"
-      className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden cursor-grab active:cursor-grabbing"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-    >
-      {/* Background Image with Slide Animation */}
-      <div className="absolute inset-0 z-0">
-        <AnimatePresence initial={false}>
-          <motion.div
-            key={currentImageIndex}
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '-100%' }}
-            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-            className="absolute inset-0"
-          >
-            <Image
-              src={images[currentImageIndex].src}
-              alt={`Background ${currentImageIndex + 1}`}
-              fill
-              className="object-cover"
-              priority={currentImageIndex === 0}
-              quality={100}
-              sizes="100vw"
-              unoptimized={false}
-            />
-          </motion.div>
-        </AnimatePresence>
-        {/* Overlay để text dễ đọc hơn */}
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-6"
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white drop-shadow-lg"
-          >
-            <motion.span
-              onClick={() => handleImageChange(0)}
-              className="cursor-pointer hover:scale-105 transition-transform inline-block"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              I'm
-            </motion.span>{' '}
-            <motion.span
-              onClick={() => handleImageChange(1)}
-              className="block mt-2 text-5xl md:text-7xl lg:text-8xl cursor-pointer hover:scale-105 transition-transform"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              HẢI
-            </motion.span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            onClick={() => handleImageChange(2)}
-            className="text-xl md:text-2xl lg:text-3xl font-light text-white drop-shadow-md cursor-pointer hover:scale-105 transition-transform inline-block"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Media Freelancer & Creative
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
-          >
-            <motion.a
-              href="https://zalo.me/0364605132"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => {
-                handleImageChange(3)
-              }}
-              className="px-8 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              CALL ME
-            </motion.a>
-            <motion.a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault()
-                handleImageChange(0)
-              }}
-              className="px-8 py-3 border-2 border-white text-white font-medium hover:bg-white hover:text-black transition-colors cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              BOOK NOW
-            </motion.a>
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* Image Indicator with Progress */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-20 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => handleImageChange(index)}
-            className="relative group"
-            aria-label={`Go to image ${index + 1}`}
-          >
-            <div
-              className={`h-1 rounded-full transition-all ${
-                currentImageIndex === index
-                  ? 'w-8 bg-white'
-                  : 'w-2 bg-white/50 group-hover:bg-white/75'
-              }`}
-            >
-              {currentImageIndex === index && !isHovered && !isPaused && (
-                <motion.div
-                  className="h-full bg-white/30 rounded-full"
-                  initial={{ width: '0%' }}
-                  animate={{ width: '100%' }}
-                  transition={{ duration: 5, ease: 'linear' }}
-                  key={currentImageIndex} // Reset animation when image changes
-                />
-              )}
+    <section id="home" className="relative min-h-screen flex flex-col justify-center pt-24 overflow-hidden mb-32">
+      {/* Asymmetrical Grid Container */}
+      <div className="max-w-[1920px] mx-auto w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        {/* Left Content Column */}
+        <div className="md:col-span-6 z-10 flex flex-col items-start gap-8">
+          <div className="space-y-4">
+            <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary font-medium">Portfolio Vol. 1</span>
+            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface leading-[1.1] tracking-tight">
+              Where the heart is, there <span className="italic font-normal">lies the treasure</span>.
+            </h1>
+          </div>
+          <div className="max-w-md">
+            <p className="text-on-surface-variant font-body text-lg leading-relaxed border-l-2 border-outline-variant pl-6 py-2">
+              Multimedia Student | Professional Host | Strategic Marketer. 
+              <br/>
+              <span className="text-sm italic opacity-70">Crafting resonant narratives through modern hosting and digital strategy.</span>
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-6 mt-4">
+            <button className="hero-gradient text-white px-10 py-4 rounded-sm font-label font-semibold text-sm tracking-widest uppercase shadow-lg shadow-primary/10 hover:shadow-primary/20 transition-all duration-300">
+              View My Work
+            </button>
+            <button className="border border-outline-variant/30 text-on-surface px-10 py-4 rounded-sm font-label font-semibold text-sm tracking-widest uppercase hover:bg-surface-container-high transition-all duration-300">
+              Download CV
+            </button>
+          </div>
+        </div>
+        
+        {/* Right Visual Column (Asymmetrical Placement) */}
+        <div className="md:col-span-6 relative mt-12 md:mt-0">
+          <div className="relative w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] max-w-2xl ml-auto">
+            {/* Main Image Frame */}
+            <div className="absolute inset-0 bg-surface-container-low rounded-lg p-2 md:p-4 rotate-2 shadow-2xl overflow-hidden group">
+              <img 
+                alt="Professional Portrait" 
+                className="w-full h-full object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" 
+                src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/606141761_1377866870701196_7022180937168848850_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeE5Y7UKvOKKpX5bZdL9Q2zlLdrY8oq76_4t2tjyirvr_qucvKk4MdR3g_7GZaq6Xqvw2h18zXoMZoJqsw9Qg-OW&_nc_ohc=1PqK9pEPZZcQ7kNvwE-Vcic&_nc_oc=Adr_EpLZMghPy_Lzp1IAdPlZ_0BKgTQr-Yu9-wDOR9yFNIoFKBUCO1N1MCseiHeOwe0&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=ezQafP-KTHBn2rT3CBLcVQ&_nc_ss=7a30f&oh=00_AfzgkAfS_pFrz9XP7xLzFpez1_nFv2b1cNboqBR2UtAUwA&oe=69C2998B"
+              />
             </div>
-          </button>
-        ))}
-      </motion.div>
-
-      {/* Scroll Indicator - Bottom Right */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.8 }}
-        className="absolute right-8 bottom-8 z-50 hidden md:flex flex-col items-center gap-4"
-      >
-        <motion.button
-          onClick={scrollToPortfolio}
-          className="flex flex-col items-center gap-2 text-white hover:text-gray-200 transition-colors"
-          aria-label="Scroll to portfolio"
-        >
-          <span className="text-sm font-medium text-white drop-shadow-md writing-vertical-rl">
-            CUỘN XUỐNG
-          </span>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-          >
-            <ChevronDown className="w-6 h-6 text-white drop-shadow-md" />
-          </motion.div>
-        </motion.button>
-      </motion.div>
+            {/* Decorative Elements */}
+            <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -top-12 -right-12 font-headline text-9xl text-outline-variant/10 select-none">CH</div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-50 hidden md:flex">
+        <span className="font-label text-[10px] uppercase tracking-[0.3rem]">Scroll</span>
+        <div className="w-px h-16 bg-gradient-to-b from-primary to-transparent"></div>
+      </div>
     </section>
   )
 }
-

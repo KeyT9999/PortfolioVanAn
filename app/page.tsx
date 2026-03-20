@@ -1,22 +1,23 @@
-import Hero from '@/components/Hero'
-import Portfolio from '@/components/Portfolio'
-import About from '@/components/About'
-import Contact from '@/components/Contact'
 import Navigation from '@/components/Navigation'
-import SectionIndicator from '@/components/SectionIndicator'
-import SocialSidebar from '@/components/SocialSidebar'
+import Hero from '@/components/Hero'
+import About from '@/components/About'
+import Hosting from '@/components/Hosting'
+import Marketing from '@/components/Marketing'
+import Media from '@/components/Media'
+import Research from '@/components/Research'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <SectionIndicator />
-      <SocialSidebar />
       <Hero />
-      <Portfolio />
       <About />
-      <Contact />
+      <Hosting />
+      <Marketing />
+      <Media />
+      <Research />
+      <Footer />
     </main>
   )
 }
-

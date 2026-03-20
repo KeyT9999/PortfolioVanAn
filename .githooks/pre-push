@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+if [ ! -d node_modules ]; then
+  echo "Skipping build: install dependencies first."
+  exit 0
+fi
+
+echo "Running production build before push..."
+npm run build

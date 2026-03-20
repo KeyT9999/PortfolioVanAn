@@ -1,55 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer components {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+@layer utilities {
+  .glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .hero-gradient { background: linear-gradient(135deg, #775a19 0%, #c5a059 100%); }
+  .bg-silk-gradient { background: linear-gradient(135deg, #775a19 0%, #c5a059 100%); }
+  .editorial-shadow { box-shadow: 0 20px 40px rgba(28, 28, 24, 0.05); }
+  .glass-header { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+  .gold-shimmer { background: linear-gradient(135deg, #775a19 0%, #c5a059 100%); }
+  
+  .animate-slide-up {
+    animation: slide-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
 }
 
-/* Writing vertical for Vietnamese text */
-.writing-vertical-rl {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+@keyframes slide-up {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
-
-body {
-  font-family: var(--font-inter);
-  background-color: #ffffff;
-  color: #000000;
-  overflow-x: hidden;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Smooth transitions */
-.transition-smooth {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
