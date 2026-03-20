@@ -22,9 +22,14 @@ export default function Hero() {
             <button className="hero-gradient text-white px-10 py-4 rounded-sm font-label font-semibold text-sm tracking-widest uppercase shadow-lg shadow-primary/10 hover:shadow-primary/20 transition-all duration-300">
               View My Work
             </button>
-            <button className="border border-outline-variant/30 text-on-surface px-10 py-4 rounded-sm font-label font-semibold text-sm tracking-widest uppercase hover:bg-surface-container-high transition-all duration-300">
+            <a 
+              href="/CVVANAN.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center border border-outline-variant/30 text-on-surface px-10 py-4 rounded-sm font-label font-semibold text-sm tracking-widest uppercase hover:bg-surface-container-high transition-all duration-300"
+            >
               Download CV
-            </button>
+            </a>
           </div>
         </div>
         
