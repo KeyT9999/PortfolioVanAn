@@ -1,4 +1,28 @@
+'use client'
+
+import Image from 'next/image'
+import { useState } from 'react'
+
+const heroPortraits = [
+  {
+    src: encodeURI('/Ảnh đẹp để giới thiệu/IMG_0695.JPG'),
+    alt: 'Vân An portrait in ao dai',
+  },
+  {
+    src: encodeURI('/Ảnh đẹp để giới thiệu/quality_restoration_20250825190635597.JPEG'),
+    alt: 'Vân An portrait restored',
+  },
+] as const
+
 export default function Hero() {
+  const [activePortraitIndex, setActivePortraitIndex] = useState(0)
+
+  const handlePortraitToggle = () => {
+    setActivePortraitIndex((currentIndex) =>
+      currentIndex === heroPortraits.length - 1 ? 0 : currentIndex + 1
+    )
+  }
+
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-center pt-24 overflow-hidden mb-32">
       {/* Asymmetrical Grid Container */}
@@ -8,14 +32,14 @@ export default function Hero() {
           <div className="space-y-4">
             <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary font-medium">Portfolio Vol. 1</span>
             <h1 className="font-headline text-5xl lg:text-7xl md:text-5xl lg:text-8xl text-on-surface leading-[1.1] tracking-tight">
-              Where the heart is, there <span className="italic font-normal">lies the treasure</span>.
+              Nguyễn Thuỳ <span className="italic font-normal">Vân An</span>
             </h1>
           </div>
           <div className="max-w-md">
             <p className="text-on-surface-variant font-body text-lg leading-relaxed border-l-2 border-outline-variant pl-6 py-2">
-              Multimedia Student | Professional Host | Strategic Marketer. 
+              Multimedia Communication | Professional Host | Strategic Marketer. 
               <br/>
-              <span className="text-sm italic opacity-70">Crafting resonant narratives through modern hosting and digital strategy.</span>
+              <span className="text-sm italic opacity-70">Where the heart is, there lies the treasure.</span>
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-6 mt-4">
@@ -37,13 +61,33 @@ export default function Hero() {
         <div className="lg:col-span-6 relative mt-12 md:mt-0">
           <div className="relative w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] max-w-2xl ml-auto">
             {/* Main Image Frame */}
-            <div className="absolute inset-0 bg-surface-container-low rounded-lg p-2 md:p-4 rotate-2 shadow-2xl overflow-hidden group">
-              <img 
-                alt="Professional Portrait" 
-                className="w-full h-full object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" 
-                src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/606141761_1377866870701196_7022180937168848850_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeE5Y7UKvOKKpX5bZdL9Q2zlLdrY8oq76_4t2tjyirvr_qucvKk4MdR3g_7GZaq6Xqvw2h18zXoMZoJqsw9Qg-OW&_nc_ohc=1PqK9pEPZZcQ7kNvwE-Vcic&_nc_oc=Adr_EpLZMghPy_Lzp1IAdPlZ_0BKgTQr-Yu9-wDOR9yFNIoFKBUCO1N1MCseiHeOwe0&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=ezQafP-KTHBn2rT3CBLcVQ&_nc_ss=7a30f&oh=00_AfzgkAfS_pFrz9XP7xLzFpez1_nFv2b1cNboqBR2UtAUwA&oe=69C2998B"
-              />
-            </div>
+            <button
+              type="button"
+              onClick={handlePortraitToggle}
+              className="absolute inset-0 bg-surface-container-low rounded-lg p-2 md:p-4 rotate-2 shadow-2xl overflow-hidden group text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              aria-label="Chạm vào ảnh để chuyển sang ảnh giới thiệu còn lại"
+            >
+              <div className="relative h-full w-full overflow-hidden rounded-md">
+                {heroPortraits.map((portrait, index) => (
+                  <Image
+                    key={portrait.src}
+                    src={portrait.src}
+                    alt={portrait.alt}
+                    fill
+                    priority={index === 0}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className={`object-cover transition-all duration-700 ease-in-out ${
+                      activePortraitIndex === index
+                        ? 'opacity-100 scale-100 grayscale-0'
+                        : 'pointer-events-none opacity-0 scale-105 grayscale'
+                    }`}
+                  />
+                ))}
+                <span className="absolute bottom-4 left-4 rounded-full bg-[#fffae7]/85 px-4 py-2 font-label text-[10px] font-semibold uppercase tracking-[0.28em] text-[#011d45] backdrop-blur-sm">
+                  Tap Photo
+                </span>
+              </div>
+            </button>
             {/* Decorative Elements */}
             <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl -z-10"></div>
             <div className="absolute -top-12 -right-12 font-headline text-9xl text-outline-variant/10 select-none">CH</div>

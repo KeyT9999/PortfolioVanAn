@@ -57,7 +57,7 @@ export default function About() {
       </div>
 
       {/* Values Section: Bento-ish Grid */}
-      <div className="py-16">
+      <div id="skill" className="scroll-mt-32 py-16">
         <div className="text-center mb-24">
           <span className="font-label uppercase tracking-[0.2rem] text-primary">Core Pillars</span>
           <h2 className="font-headline text-4xl mt-4">The Foundation of Excellence</h2>

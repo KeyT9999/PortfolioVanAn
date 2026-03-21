@@ -43,15 +43,15 @@ export default function Marketing() {
           </div>
           
           {/* Zalo Ecosystem Card */}
-          <div className="lg:col-span-4 bg-on-surface text-surface-container-lowest p-10 rounded-lg flex flex-col justify-between h-[400px]">
+          <div className="lg:col-span-4 bg-[#fffae7] text-on-surface p-10 rounded-lg flex flex-col justify-between h-[400px] border border-outline-variant/20">
             <div>
-              <span className="material-symbols-outlined text-primary-container mb-6" style={{ fontSize: "40px" }}>hub</span>
+              <span className="material-symbols-outlined text-primary mb-6" style={{ fontSize: "40px" }}>hub</span>
               <h3 className="font-headline text-2xl mb-2">Zalo Ecosystem</h3>
-              <p className="text-surface-variant text-sm leading-relaxed">Private community management ensuring 85% retention rate and high engagement through personalized CRM.</p>
+              <p className="text-on-surface-variant text-sm leading-relaxed">Private community management ensuring 85% retention rate and high engagement through personalized CRM.</p>
             </div>
             <div>
               <div className="text-6xl font-headline font-bold">220+</div>
-              <div className="text-xs font-label uppercase tracking-widest text-primary-container mt-2">Core Members</div>
+              <div className="text-xs font-label uppercase tracking-widest text-primary mt-2">Core Members</div>
             </div>
           </div>
           

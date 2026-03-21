@@ -46,7 +46,7 @@ export default function Hosting() {
             <div className="aspect-[4/5] bg-surface-container-highest overflow-hidden rounded-sm group">
               <img alt="Grand Stage View" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/605531383_1377559400731943_9108653410773346440_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHQo4UmgoYXzhf_QmzBNcivAvqrURSFbMoC-qtRFIVsyjkj5OltA01hsEtzhDHGqoJWFdbJc3qyVVJ0GkCnb8a5&_nc_ohc=fo-P4TT6ugQQ7kNvwHu3EXL&_nc_oc=AdpjaHWolNAtW1EtD55g3LMKTlGWflA-nvjXqYPjibhdZG34Cz0CxmSypbXdi4_NnnU&_nc_zt=23&_nc_ht=scontent.fsgn2-9.fna&_nc_gid=_iFu5zkYEx1ysYSdcEikyA&_nc_ss=7a30f&oh=00_AfxrwzX-_8v9mCuTZuS1DlUWDbNmYzJXRpKow8Cat8ZQ8A&oe=69C28265"/>
             </div>
-            <div className="absolute -bottom-8 -right-8 md:right-12 bg-white p-8 shadow-soft max-w-xs border-l-4 border-primary">
+            <div className="absolute -bottom-8 -right-8 md:right-12 bg-[#fffae7] p-8 shadow-soft max-w-xs border-l-4 border-primary">
               <h3 className="font-headline text-xl mb-2">Alpha Hall Presence</h3>
               <p className="text-sm text-on-surface-variant leading-relaxed">Captivating a diverse audience of 3,000+ industry leaders during the Annual Visionary Summit.</p>
             </div>
@@ -87,7 +87,7 @@ export default function Hosting() {
             </a>
           </div>
           <div className="lg:col-span-8">
-            <div className="relative aspect-video bg-stone-800 rounded-sm overflow-hidden shadow-2xl">
+            <div className="relative aspect-video bg-[#fffae7] rounded-sm overflow-hidden shadow-2xl">
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-tr from-stone-900 to-transparent">
                 <img alt="Showreel Thumbnail" className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40" src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/501039028_1202355758252309_6343487756814000815_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFf5eSC-HbfiX90bvQUIJ5ApXXsBwFRTI-ldewHAVFMjyn8QJ7qFaYvuawSeaNBcVPaW9zkJQ3h2DMURQWwluFp&_nc_ohc=_AR6_ex9cw0Q7kNvwGAj2Li&_nc_oc=AdrfExCOSNumuqg1goiVGKroA3d6aVydGtg1NHf2Z5ADHqygDyuXRNI0H2zfY9n3l3w&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=nlUcIQf9-ounpOMZRESZKQ&_nc_ss=7a30f&oh=00_AfwNOHh9A86EfSm77-isN4QqOAqlPlrLNZqqw8pzmL0WZg&oe=69C28A9D"/>
                 <button className="z-10 w-24 h-24 rounded-full bg-primary flex items-center justify-center text-white shadow-xl hover:scale-105 transition-transform duration-300">

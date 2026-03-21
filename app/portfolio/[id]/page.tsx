@@ -28,7 +28,7 @@ export default function PortfolioDetailPage({
       <div className="section-shell">
         <Link
           href="/#portfolio"
-          className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-medium text-[var(--color-ink)] transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
+          className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-[#fffae7] px-4 py-2 text-sm font-medium text-[var(--color-ink)] transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
         >
           <ArrowLeft className="h-4 w-4" />
           Quay lại portfolio

@@ -8,7 +8,7 @@ import { projects } from './data'
 
 export default function MCPage() {
   return (
-    <main className="pt-32 bg-[#fcf9f3] text-[#1c1c18]">
+    <main className="pt-32 bg-[#fffae7] text-[#1c1c18]">
       <Navigation title="MC Vân An" />
 
       {/* Section 1: Intro */}
@@ -34,10 +34,10 @@ export default function MCPage() {
             </div>
           </div>
           <div className="lg:col-span-5 relative mt-16 lg:mt-0">
-            <div className="aspect-[3/4] bg-[#f0eee8] overflow-hidden rounded-sm">
+            <div className="aspect-[3/4] bg-[#fffae7] overflow-hidden rounded-sm">
               <img className="w-full h-full object-cover" alt="Professional MC portrait" src={encodeURI('/Ảnh đẹp để giới thiệu/IMG_5511.JPG')}/>
             </div>
-            <div className="absolute -bottom-8 lg:-bottom-8 left-0 lg:-left-8 p-6 lg:p-8 bg-[#fcf9f3] shadow-sm border border-[#d1c5b4]/10 max-w-[280px]">
+            <div className="absolute -bottom-8 lg:-bottom-8 left-0 lg:-left-8 p-6 lg:p-8 bg-[#fffae7] shadow-sm border border-[#d1c5b4]/10 max-w-[280px]">
               <p className="font-serif italic text-[#1c1c18] mb-2">Giá trị cốt lõi</p>
               <p className="text-sm text-[#4e4639]">Lắng nghe, thấu hiểu, dẫn dắt cảm xúc, biến áp lực thành năng lượng.</p>
             </div>
@@ -49,7 +49,7 @@ export default function MCPage() {
       </section>
 
       {/* Section 2: Personal Info & Education */}
-      <section className="bg-[#f6f3ed] py-32 px-6 md:px-12 lg:px-24">
+      <section className="bg-[#fffae7] py-32 px-6 md:px-12 lg:px-24">
         <div className="max-w-screen-2xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div>
@@ -82,7 +82,7 @@ export default function MCPage() {
               </div>
             </div>
             
-            <div className="bg-[#e5e2dc] p-8 md:p-12 rounded-sm">
+            <div className="bg-[#fffae7] p-8 md:p-12 rounded-sm border border-[#d1c5b4]/20">
               <h3 className="font-serif text-2xl mb-6">Kỹ năng sân khấu</h3>
               <p className="text-[#4e4639] mb-8 leading-relaxed">
                 Phong thái sân khấu bài bản được trui rèn qua nhiều môi trường chuyên nghiệp. Khả năng xử lý tình huống linh hoạt và kinh nghiệm dẫn dắt đa dạng các loại hình sự kiện từ trang trọng đến nghệ thuật.
@@ -119,7 +119,7 @@ export default function MCPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 lg:gap-y-16">
           {projects.map((project, index) => (
             <div key={index} className="group">
-              <div className="aspect-[4/3] overflow-hidden mb-6 bg-[#f0eee8]">
+              <div className="aspect-[4/3] overflow-hidden mb-6 bg-[#fffae7]">
                 <img 
                   className="w-full h-full object-cover grayscale md:hover:grayscale-0 transition-all duration-700 md:group-hover:scale-105" 
                   alt={project.title} 
@@ -139,8 +139,8 @@ export default function MCPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 lg:py-32 bg-slate-900 text-stone-100 text-center px-6">
-        <span className="font-label text-xs uppercase tracking-[0.4em] text-sky-400 mb-6 block">Ready to Collaborate?</span>
+      <section className="py-24 lg:py-32 bg-[#fffae7] text-[#1c1c18] text-center px-6">
+        <span className="font-label text-xs uppercase tracking-[0.4em] text-primary mb-6 block">Ready to Collaborate?</span>
         <h2 className="font-serif text-5xl md:text-6xl mb-12">Hãy cùng tạo nên những <br/><span className="italic font-normal">khoảnh khắc đáng nhớ.</span></h2>
         <a href="https://www.facebook.com/vanan.nguyenthuy.1" target="_blank" rel="noopener noreferrer" className="blue-shimmer inline-block text-white px-12 py-4 rounded-sm font-semibold tracking-widest text-sm hover:opacity-90 transition-all transform hover:-translate-y-1">
           LIÊN HỆ ĐẶT LỊCH NGAY
