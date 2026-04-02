@@ -27,7 +27,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Contact
+            Liên hệ
           </a>
         </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
             className="flex flex-col items-center transition-opacity duration-300 hover:opacity-70"
           >
             <span className="font-label text-[11px] font-bold uppercase tracking-[0.12rem]">
-              Phone
+              Điện thoại
             </span>
             <span className="mt-2 text-sm font-medium tracking-[0.03rem]">
               0986 619 798

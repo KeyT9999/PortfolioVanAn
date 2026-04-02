@@ -37,14 +37,14 @@ export default function Hero() {
           </div>
           <div className="max-w-md">
             <p className="text-on-surface-variant font-body text-lg leading-relaxed border-l-2 border-outline-variant pl-6 py-2">
-              Multimedia Communication | Professional Host | Strategic Marketer. 
+              Truyền thông Đa phương tiện | MC Chuyên nghiệp | Chiến lược Marketing.
               <br/>
               <span className="text-sm italic opacity-70">Where the heart is, there lies the treasure.</span>
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-6 mt-4">
             <button className="hero-gradient text-white px-10 py-4 rounded-sm font-label font-semibold text-sm tracking-widest uppercase shadow-lg shadow-primary/10 hover:shadow-primary/20 transition-all duration-300">
-              View My Work
+              Xem dự án của tôi
             </button>
             <a 
               href="/CVVANAN.pdf"
@@ -52,7 +52,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="text-center border border-outline-variant/30 text-on-surface px-10 py-4 rounded-sm font-label font-semibold text-sm tracking-widest uppercase hover:bg-surface-container-high transition-all duration-300"
             >
-              Download CV
+              Tải CV
             </a>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function Hero() {
                   />
                 ))}
                 <span className="absolute bottom-4 left-4 rounded-full bg-[#fffae7]/85 px-4 py-2 font-label text-[10px] font-semibold uppercase tracking-[0.28em] text-[#011d45] backdrop-blur-sm">
-                  Tap Photo
+                  Nhấn vào ảnh
                 </span>
               </div>
             </button>
@@ -97,7 +97,7 @@ export default function Hero() {
       
       {/* Scroll Indicator */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-50 hidden md:flex">
-        <span className="font-label text-[10px] uppercase tracking-[0.3rem]">Scroll</span>
+        <span className="font-label text-[10px] uppercase tracking-[0.3rem]">Cuộn xuống</span>
         <div className="w-px h-16 bg-gradient-to-b from-primary to-transparent"></div>
       </div>
     </section>

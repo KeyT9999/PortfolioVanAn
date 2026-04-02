@@ -6,18 +6,18 @@ export default function Media() {
       <div className="max-w-[1440px] mx-auto px-6 md:px-24 mb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-7">
-            <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary mb-6 block">Spotlight Production</span>
+            <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary mb-6 block">Dự án nổi bật</span>
             <h1 className="font-headline text-5xl lg:text-7xl md:text-5xl lg:text-8xl leading-[1.1] mb-8 tracking-tighter">
               Người Gieo <br/><span className="italic font-normal">Mầm Xanh</span>
             </h1>
             <div className="flex flex-wrap gap-8 items-center mb-12">
               <div className="flex flex-col">
-                <span className="font-label text-[10px] uppercase tracking-widest text-outline">Role</span>
+                <span className="font-label text-[10px] uppercase tracking-widest text-outline">Vai trò</span>
                 <span className="font-body text-lg font-medium">Director &amp; Executive Producer</span>
               </div>
               <div className="w-px h-10 bg-outline-variant/30"></div>
               <div className="flex flex-col">
-                <span className="font-label text-[10px] uppercase tracking-widest text-outline">Engagement</span>
+                <span className="font-label text-[10px] uppercase tracking-widest text-outline">Lượt tương tác</span>
                 <span className="font-body text-lg font-medium">18,000+ Organic Views</span>
               </div>
             </div>
@@ -29,17 +29,41 @@ export default function Media() {
           </div>
         </div>
         
-        {/* Cinematic Placeholder */}
-        <div className="mt-16 relative aspect-video w-full overflow-hidden bg-surface-container-high rounded-sm group cursor-pointer shadow-2xl">
-          <img alt="Cinematic frame from MV Nguoi Gieo Mam Xanh" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/501039028_1202355758252309_6343487756814000815_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFf5eSC-HbfiX90bvQUIJ5ApXXsBwFRTI-ldewHAVFMjyn8QJ7qFaYvuawSeaNBcVPaW9zkJQ3h2DMURQWwluFp&_nc_ohc=_AR6_ex9cw0Q7kNvwGAj2Li&_nc_oc=AdrfExCOSNumuqg1goiVGKroA3d6aVydGtg1NHf2Z5ADHqygDyuXRNI0H2zfY9n3l3w&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=nlUcIQf9-ounpOMZRESZKQ&_nc_ss=7a30f&oh=00_AfwNOHh9A86EfSm77-isN4QqOAqlPlrLNZqqw8pzmL0WZg&oe=69C28A9D"/>
-          <div className="absolute inset-0 bg-on-background/20 flex items-center justify-center">
-            <div className="w-20 h-20 rounded-full border border-white/40 flex items-center justify-center glass-effect transition-transform group-hover:scale-110">
-              <span className="material-symbols-outlined text-white text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
-            </div>
+        {/* Facebook Video Embed */}
+        <div className="mt-16 relative w-full overflow-hidden rounded-sm shadow-2xl bg-black" style={{ paddingTop: '56.25%' }}>
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61578641312178%2Fvideos%2F1257373838838121%2F&show_text=false&width=560&t=0"
+            className="absolute inset-0 w-full h-full"
+            style={{ border: 'none', overflow: 'hidden' }}
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowFullScreen
+            title="MV Người Gieo Mầm Xanh"
+          />
+          <div className="absolute bottom-4 left-6 text-white pointer-events-none">
+            <span className="font-label text-[10px] uppercase tracking-[0.3em] bg-black/40 backdrop-blur-sm px-2 py-1 rounded">MV Chính thức</span>
           </div>
-          <div className="absolute bottom-8 left-8 text-white">
-            <span className="font-label text-[10px] uppercase tracking-[0.3em]">Official Music Video</span>
-          </div>
+        </div>
+
+        {/* External Links */}
+        <div className="mt-10 flex flex-wrap gap-4">
+          <a
+            href="https://www.facebook.com/61578641312178/videos/1257373838838121"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 blue-shimmer text-white px-8 py-3 rounded-sm font-label text-xs font-bold tracking-widest uppercase hover:opacity-90 transition-opacity"
+          >
+            <span className="material-symbols-outlined text-base">play_circle</span>
+            Xem MV trên Facebook
+          </a>
+          <a
+            href="https://drive.google.com/drive/folders/1kFS7Isq83CpFIj_eCSTwxzd0jBZOzgTp?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 border border-outline-variant px-8 py-3 rounded-sm font-label text-xs font-bold tracking-widest uppercase hover:bg-surface-container transition-colors"
+          >
+            <span className="material-symbols-outlined text-base">folder_open</span>
+            Tải tài liệu (Drive)
+          </a>
         </div>
       </div>
 
@@ -57,7 +81,7 @@ export default function Media() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-surface-container-lowest p-8 rounded-sm border-l-2 border-primary">
                     <span className="font-headline text-4xl text-primary block mb-2">46</span>
-                    <span className="font-label text-[10px] uppercase tracking-widest text-outline">Associates Managed</span>
+                    <span className="font-label text-[10px] uppercase tracking-widest text-outline">Nhân sự điều phối</span>
                   </div>
                   <div className="bg-surface-container-lowest p-8 rounded-sm">
                     <span className="font-headline text-4xl text-primary block mb-2">CSR</span>
@@ -104,12 +128,12 @@ export default function Media() {
           <div className="bg-surface py-16 px-8 text-center group transition-colors hover:bg-surface-container-low">
             <span className="material-symbols-outlined text-primary-container text-3xl mb-6 block">visibility</span>
             <div className="font-headline text-5xl mb-2">18K+</div>
-            <div className="font-label text-[10px] uppercase tracking-widest text-outline">Organic Reach</div>
+            <div className="font-label text-[10px] uppercase tracking-widest text-outline">Lượt tiếp cận tự nhiên</div>
           </div>
           <div className="bg-surface py-16 px-8 text-center group transition-colors hover:bg-surface-container-low border-x border-outline-variant/15">
             <span className="material-symbols-outlined text-primary-container text-3xl mb-6 block">groups</span>
             <div className="font-headline text-5xl mb-2">46</div>
-            <div className="font-label text-[10px] uppercase tracking-widest text-outline">Team Members Guided</div>
+            <div className="font-label text-[10px] uppercase tracking-widest text-outline">Thành viên được dẫn dắt</div>
           </div>
           <div className="bg-surface py-16 px-8 text-center group transition-colors hover:bg-surface-container-low">
             <span className="material-symbols-outlined text-primary-container text-3xl mb-6 block">favorite</span>
