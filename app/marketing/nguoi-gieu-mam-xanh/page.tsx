@@ -18,7 +18,7 @@ export default function NguoiGieuMamXanhPage() {
         </div>
 
         {/* Hero */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-24">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8">
           <span className="font-label text-xs uppercase tracking-[0.3em] text-primary mb-4 block">Case Study 02 · Tháng 06 – 07/2025</span>
           <h1 className="font-serif text-5xl md:text-7xl leading-tight mb-4">
             Đạo Diễn Sản Xuất & PR
@@ -70,8 +70,22 @@ export default function NguoiGieuMamXanhPage() {
           </div>
         </section>
 
+        {/* Banner Truyền thông */}
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8 mt-4">
+          <div className="relative w-full aspect-[21/9] md:aspect-[4/1] rounded-sm overflow-hidden group">
+            <img src="/Marketing/Thumbnail.png" alt="Chi tiết phương tiện truyền thông" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors flex flex-col items-center justify-center p-6 text-center">
+              <h3 className="text-white font-serif text-3xl md:text-5xl mb-6 shadow-sm">Chiến dịch Truyền thông</h3>
+              <Link href="/marketing/nguoi-gieu-mam-xanh/truyen-thong" className="inline-flex items-center gap-2 bg-white text-[#1c1c18] px-8 py-3 rounded-sm font-label text-xs font-bold tracking-widest uppercase hover:opacity-90 transition-opacity shadow-xl">
+                Xem chi tiết bài đăng <span className="material-symbols-outlined text-base">arrow_forward</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+
         {/* 1. Mô tả dự án */}
-        <section className="bg-surface-container-low py-20 mb-16">
+        <section className="bg-surface-container-low py-8 mb-8">
           <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               <div className="lg:col-span-4">
@@ -91,7 +105,7 @@ export default function NguoiGieuMamXanhPage() {
         </section>
 
         {/* 2. Vai trò cá nhân */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-16">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-4">
               <h2 className="font-label text-xs uppercase tracking-[0.2em] text-primary mb-4">02</h2>
@@ -116,7 +130,7 @@ export default function NguoiGieuMamXanhPage() {
                   desc: 'Xây dựng chiến lược PR thuần organic dựa trên storytelling chân thực. Kết quả: 18.000 lượt xem sau một tuần mà không cần bất kỳ ngân sách quảng cáo nào.',
                 },
               ].map((role) => (
-                <div key={role.title} className="flex items-start gap-6 p-8 bg-surface-container-lowest border-l-2 border-primary rounded-sm">
+                <div key={role.title} className="flex items-start gap-6 pl-6 py-2 border-l-2 border-primary rounded-sm">
                   <span className="material-symbols-outlined text-primary text-2xl flex-shrink-0 mt-0.5">{role.icon}</span>
                   <div>
                     <h4 className="font-headline text-xl mb-2">{role.title}</h4>
@@ -129,7 +143,7 @@ export default function NguoiGieuMamXanhPage() {
         </section>
 
         {/* 3. Công cụ & Phương pháp */}
-        <section className="bg-surface-container-low py-20 mb-16">
+        <section className="bg-surface-container-low py-8 mb-8">
           <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               <div className="lg:col-span-4">
@@ -156,7 +170,7 @@ export default function NguoiGieuMamXanhPage() {
         </section>
 
         {/* 4. Kết quả */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-16">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-4">
               <h2 className="font-label text-xs uppercase tracking-[0.2em] text-primary mb-4">04</h2>
@@ -187,7 +201,7 @@ export default function NguoiGieuMamXanhPage() {
         </section>
 
         {/* Hình ảnh & Links */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-12">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8">
           <div className="flex flex-wrap gap-4">
             <a
               href="https://drive.google.com/drive/folders/1kFS7Isq83CpFIj_eCSTwxzd0jBZOzgTp?usp=sharing"
@@ -202,7 +216,7 @@ export default function NguoiGieuMamXanhPage() {
         </section>
 
         {/* Bài học */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-16">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8">
           <div className="bg-surface p-10 md:p-14 border border-outline-variant/20 rounded-sm relative">
             <span className="material-symbols-outlined absolute -top-4 left-8 text-primary/20 text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
             <h4 className="font-label text-xs uppercase tracking-widest text-primary mb-6">Tinh thần dự án</h4>

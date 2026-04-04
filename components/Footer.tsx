@@ -31,27 +31,27 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-8 text-[#1c1c18] md:flex-row md:gap-16">
+        <div className="flex flex-col items-center justify-center gap-8 text-[#1c1c18] md:flex-row md:gap-16 font-sans">
           <a
             href="tel:0986619798"
-            className="flex flex-col items-center transition-opacity duration-300 hover:opacity-70"
+            className="flex flex-col items-center transition-all duration-500 hover:tracking-[0.15rem]"
           >
-            <span className="font-label text-[11px] font-bold uppercase tracking-[0.12rem]">
+            <span className="text-xs uppercase tracking-[0.1rem] mb-2">
               Điện thoại
             </span>
-            <span className="mt-2 text-sm font-medium tracking-[0.03rem]">
+            <span className="text-xs tracking-[0.1rem]">
               0986 619 798
             </span>
           </a>
 
           <a
             href="mailto:nguyenthuyvanan05@gmail.com"
-            className="flex flex-col items-center transition-opacity duration-300 hover:opacity-70"
+            className="flex flex-col items-center transition-all duration-500 hover:tracking-[0.15rem]"
           >
-            <span className="font-label text-[11px] font-bold uppercase tracking-[0.12rem]">
+            <span className="text-xs uppercase tracking-[0.1rem] mb-2">
               Email
             </span>
-            <span className="mt-2 break-all text-sm font-medium tracking-[0.01rem]">
+            <span className="text-xs tracking-[0.1rem] break-all">
               nguyenthuyvanan05@gmail.com
             </span>
           </a>

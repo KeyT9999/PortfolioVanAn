@@ -54,9 +54,8 @@ export default function CampaignSlider({
             key={i}
             src={img.src}
             alt={img.alt}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-              i === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${i === currentIndex ? 'opacity-100' : 'opacity-0'
+              }`}
           />
         ))}
 
@@ -87,9 +86,8 @@ export default function CampaignSlider({
               <button
                 key={i}
                 onClick={(e) => { e.stopPropagation(); setCurrentIndex(i) }}
-                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                  i === currentIndex ? 'bg-white w-4' : 'bg-white/50'
-                }`}
+                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-white w-4' : 'bg-white/50'
+                  }`}
                 aria-label={`Ảnh ${i + 1}`}
               />
             ))}
@@ -109,7 +107,7 @@ export default function CampaignSlider({
         <span className="font-label text-[10px] uppercase tracking-widest text-primary mb-2">{label}</span>
         <h4 className="font-headline text-xl mb-3">{title}</h4>
         <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-4 flex-1">{description}</p>
-        
+
         {links && links.length > 0 && (
           <div className="mb-4">
             <details className="group marker:content-['']">

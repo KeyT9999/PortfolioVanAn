@@ -39,21 +39,17 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
 
           {/* Action Button & Mobile Toggle */}
           <div className="flex items-center gap-4 z-50">
-            <div className="hidden lg:flex items-start pr-2 text-[#011d45]">
+            <div className="hidden lg:flex items-center pr-2 text-[#011d45]">
               <a
                 href="tel:0986619798"
-                className="flex flex-col leading-none transition-opacity duration-300 hover:opacity-70"
+                className="flex items-center gap-2 font-serif font-bold text-lg tracking-tight transition-opacity duration-300 hover:opacity-70"
               >
-                <span className="font-label text-[11px] font-bold tracking-[0.08em] uppercase">
-                  Phone
-                </span>
-                <span className="mt-2 font-label text-sm font-medium tracking-[0.02em]">
-                  0986 619 798
-                </span>
+                <span className="material-symbols-outlined text-[22px]">deskphone</span>
+                <span>0986 619 798</span>
               </a>
             </div>
 
-            <a href="https://www.facebook.com/vanan.nguyenthuy.1" target="_blank" rel="noopener noreferrer" className="hidden md:inline-block blue-shimmer text-[#011d45] px-8 py-2.5 rounded-sm font-bold tracking-wide text-sm scale-95 hover:scale-100 duration-200 ease-in-out">
+            <a href="https://www.facebook.com/vanan.nguyenthuy.1" target="_blank" rel="noopener noreferrer" className="hidden md:inline-block blue-shimmer text-[#011d45] px-8 py-2.5 rounded-sm font-serif font-bold tracking-tight text-lg scale-95 hover:scale-100 duration-200 ease-in-out">
               Contact
             </a>
             
@@ -95,15 +91,15 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
         <div className="flex flex-col items-center gap-5 pt-4 text-center">
           <a
             href="tel:0986619798"
-            className="flex flex-col items-center text-[#011d45] transition-opacity duration-300 hover:opacity-70"
+            className="flex items-center gap-3 text-[#011d45] transition-opacity duration-300 hover:opacity-70 font-bold"
           >
-            <span className="font-label text-[11px] font-bold uppercase tracking-[0.08em]">Phone</span>
-            <span className="mt-2 text-base font-medium">0986 619 798</span>
+            <span className="material-symbols-outlined text-[32px]">deskphone</span>
+            <span>0986 619 798</span>
           </a>
         </div>
         
         <div className="pt-8 mt-8 border-t border-[#0a4275]/10 dark:border-white/10 w-2/3 text-center">
-            <a onClick={() => setIsOpen(false)} href="https://www.facebook.com/vanan.nguyenthuy.1" target="_blank" rel="noopener noreferrer" className="blue-shimmer text-[#011d45] px-12 py-4 rounded-sm font-bold tracking-wide text-lg inline-block">
+            <a onClick={() => setIsOpen(false)} href="https://www.facebook.com/vanan.nguyenthuy.1" target="_blank" rel="noopener noreferrer" className="blue-shimmer text-[#011d45] px-12 py-4 rounded-sm font-bold tracking-wide text-2xl inline-block">
             Get in Touch
             </a>
         </div>

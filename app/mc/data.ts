@@ -37,6 +37,12 @@ export const projects = [
     "image": "/optimized/K%E1%BB%89%20ni%E1%BB%87m%2050%20n%C4%83m/DZIIST-19-cover-480.webp"
   },
   {
+    "title": "Marketing",
+    "slug": "marketing",
+    "role": "Dẫn chương trình",
+    "image": "/optimized/Marketing/biatrungthuong-cover-480.webp"
+  },
+  {
     "title": "MC Thảm đỏ Lễ Tôn Vinh",
     "slug": "mc-tham-do-le-ton-vinh",
     "role": "Dẫn chương trình",
@@ -158,6 +164,14 @@ export const projectDetails: Record<string, { title: string, images: string[] }>
       "/optimized/K%E1%BB%89%20ni%E1%BB%87m%2050%20n%C4%83m/IMG_7852-gallery-1280.webp",
       "/optimized/K%E1%BB%89%20ni%E1%BB%87m%2050%20n%C4%83m/IMG_9911-gallery-1280.webp",
       "/optimized/K%E1%BB%89%20ni%E1%BB%87m%2050%20n%C4%83m/IMG_9912-gallery-1280.webp"
+    ]
+  },
+  "marketing": {
+    "title": "Marketing",
+    "images": [
+      "/optimized/Marketing/biatrungthuong-gallery-1280.webp",
+      "/optimized/Marketing/Poster%20D%E1%BB%8Dc%20-%20Ng%C6%B0%E1%BB%9Di%20Gieo%20M%E1%BA%A7m%20Xanh-gallery-1280.webp",
+      "/optimized/Marketing/Thumbnail-gallery-1280.webp"
     ]
   },
   "mc-tham-do-le-ton-vinh": {

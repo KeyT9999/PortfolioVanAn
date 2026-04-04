@@ -19,7 +19,7 @@ export default function PhuongDoiPage() {
         </div>
 
         {/* Hero */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-24">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8">
           <span className="font-label text-xs uppercase tracking-[0.3em] text-primary mb-4 block">Case Study 01 · 06/2025 – Hiện tại</span>
           <h1 className="font-serif text-5xl md:text-7xl leading-tight mb-4">
             Quản Trị Thương Hiệu & Vận Hành F&B
@@ -42,7 +42,7 @@ export default function PhuongDoiPage() {
         </section>
 
         {/* 1. Mô tả dự án */}
-        <section className="bg-surface-container-low py-20 mb-16">
+        <section className="bg-surface-container-low py-8 mb-8">
           <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               <div className="lg:col-span-4">
@@ -62,7 +62,7 @@ export default function PhuongDoiPage() {
         </section>
 
         {/* 2. Vai trò cá nhân */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-16">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-4">
               <h2 className="font-label text-xs uppercase tracking-[0.2em] text-primary mb-4">02</h2>
@@ -87,7 +87,7 @@ export default function PhuongDoiPage() {
                   desc: 'Đảm nhiệm việc đàm phán, quản lý hợp đồng với các đơn vị lữ hành và đối tác sự kiện, đồng thời hoàn thiện các quy trình paperwork chuyên môn.',
                 },
               ].map((role) => (
-                <div key={role.title} className="flex items-start gap-6 p-8 bg-surface-container-lowest border-l-2 border-primary rounded-sm">
+                <div key={role.title} className="flex items-start gap-6 pl-6 py-2 border-l-2 border-primary rounded-sm">
                   <span className="material-symbols-outlined text-primary text-2xl flex-shrink-0 mt-0.5">{role.icon}</span>
                   <div>
                     <h4 className="font-headline text-xl mb-2">{role.title}</h4>
@@ -100,7 +100,7 @@ export default function PhuongDoiPage() {
         </section>
 
         {/* 3. Công cụ & Phương pháp */}
-        <section className="bg-surface-container-low py-20 mb-16">
+        <section className="bg-surface-container-low py-8 mb-8">
           <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               <div className="lg:col-span-4">
@@ -154,7 +154,7 @@ export default function PhuongDoiPage() {
         </section>
 
         {/* 4. Kết quả */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-16">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-4">
               <h2 className="font-label text-xs uppercase tracking-[0.2em] text-primary mb-4">04</h2>
@@ -177,22 +177,9 @@ export default function PhuongDoiPage() {
           </div>
         </section>
 
-        {/* Bài học */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-20">
-          <div className="bg-surface p-10 md:p-14 border border-outline-variant/20 rounded-sm relative">
-            <span className="material-symbols-outlined absolute -top-4 left-8 text-primary/20 text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
-            <h4 className="font-label text-xs uppercase tracking-widest text-primary mb-6">Bài học đúc kết</h4>
-            <div className="space-y-5 font-serif italic text-xl text-on-surface-variant leading-relaxed max-w-4xl">
-              <p>10 tháng với vị trí này, là một người thầy lớn đối với mình. Những kiến thức sách vở vốn không màu hồng, bởi thực tế luôn đi kèm thử thách.</p>
-              <p>Mình đã học được cách <span className="text-on-surface not-italic font-medium">quản trị nhân sự</span>, biết lúc nào cần cứng rắn hay mềm mỏng. Nghề làm dâu trăm họ rèn luyện cho mình sự tỉ mỉ, cùng lòng trắc ẩn sâu sắc.</p>
-              <p>Khi thấu hiểu nhóm khách hàng trung niên, <em>kho báu nhận lại chính là niềm tin bền vững</em>.</p>
-            </div>
-            <cite className="mt-8 block font-label text-xs uppercase tracking-widest text-primary not-italic">Vân An — Bài học thực chiến</cite>
-          </div>
-        </section>
 
         {/* Chiến dịch */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-16">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8">
           <h3 className="font-serif text-3xl mb-10">Một số chiến dịch đã thực hiện</h3>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <CampaignSlider
@@ -342,6 +329,19 @@ export default function PhuongDoiPage() {
               Xem Fanpage Nhà Hàng
             </a>
 
+          </div>
+        </section>
+
+        {/* Bài học */}
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-8">
+          <div className="bg-surface p-10 md:p-14 border border-outline-variant/20 rounded-sm relative">
+            <span className="material-symbols-outlined absolute -top-4 left-8 text-primary/20 text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
+            <h4 className="font-label text-xs uppercase tracking-widest text-primary mb-6">Bài học đúc kết</h4>
+            <div className="space-y-5 font-serif italic text-xl text-on-surface-variant leading-relaxed max-w-4xl">
+              <p>10 tháng với vị trí này, là một người thầy lớn đối với mình. Những kiến thức sách vở vốn không màu hồng, bởi thực tế luôn đi kèm thử thách. Quá trình thực chiến đã tặng cho mình nhiều va vấp, giúp mình trưởng thành hơn từng ngày. Nghề làm dâu trăm họ rèn luyện cho mình sự tỉ mỉ, cùng lòng trắc ẩn sâu sắc.</p>
+              <p>Mình đã học được cách <span className="text-on-surface not-italic font-medium">quản trị nhân sự</span>, biết lúc nào cần cứng rắn hay mềm mỏng. Việc vận hành đội ngũ đòi hỏi sự linh hoạt, nhằm đảm bảo chất lượng dịch vụ tốt nhất. Khi thấu hiểu nhóm khách hàng trung niên, kho báu nhận lại chính là niềm tin bền vững. Mỗi sai sót đều là một bài học đắt giá, thúc đẩy mình hoàn thiện tư duy mỗi ngày.</p>
+            </div>
+            <cite className="mt-8 block font-label text-xs uppercase tracking-widest text-primary not-italic">Vân An — Bài học thực chiến</cite>
           </div>
         </section>
 

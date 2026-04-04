@@ -52,7 +52,7 @@ export default function Marketing() {
             Marketing <span className="italic font-normal font-serif">Projects</span>
           </h2>
           <p className="max-w-sm text-on-surface-variant font-body leading-relaxed text-base">
-            Những dự án mình đã trực tiếp dẫn dắt — từ chiến lược đến thực thi — với kết quả đo lường được.
+            Những dự án mình đã trực tiếp dẫn dắt, từ chiến lược đến thực thi, với kết quả đo lường được.
           </p>
         </div>
         <div className="h-[1px] w-full bg-outline-variant/20 mt-12" />
