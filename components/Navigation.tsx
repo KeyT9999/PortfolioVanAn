@@ -33,7 +33,6 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#skill">Skills</Link>
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#marketing">Marketing</Link>
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/mc">MC</Link>
-            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#research">Research</Link>
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/cv">My CV</Link>
           </div>
 
@@ -85,7 +84,6 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
         <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#skill">Skills</Link>
         <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#marketing">Marketing</Link>
         <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/mc">MC</Link>
-        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#research">Research</Link>
         <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/cv">My CV</Link>
 
         <div className="flex flex-col items-center gap-5 pt-4 text-center">

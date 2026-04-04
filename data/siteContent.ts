@@ -86,11 +86,6 @@ export const siteContent = {
       description:
         'Kết hợp sáng tạo nội dung với tổ chức sản xuất và giá trị cộng đồng để dự án vừa chạm vừa có ích.',
     },
-    {
-      title: 'Research & Innovation',
-      description:
-        'Quan tâm đến AI, AEO và hành vi tiêu dùng mới để xây chiến lược truyền thông có chiều sâu dài hạn.',
-    },
   ] satisfies FocusArea[],
   skillGroups: [
     'Hospitality-first mindset',

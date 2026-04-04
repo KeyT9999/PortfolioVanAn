@@ -8,7 +8,7 @@ export interface PortfolioStarBlock {
   points: string[]
 }
 
-export type PortfolioAccent = 'hosting' | 'marketing' | 'csr' | 'research'
+export type PortfolioAccent = 'hosting' | 'marketing' | 'csr'
 
 export interface PortfolioItem {
   id: number
@@ -51,11 +51,6 @@ export const portfolioAccentStyles: Record<
     panel: 'from-[#84613a] via-[#c39a5f] to-[#f4ead7]',
     badge: 'bg-[#4b3517]/85 text-[#fff8ec]',
     border: 'border-[#d4b07b]',
-  },
-  research: {
-    panel: 'from-[#3c4268] via-[#6d74a6] to-[#e6e9fb]',
-    badge: 'bg-[#242947]/85 text-[#f4f6ff]',
-    border: 'border-[#a6add9]',
   },
 }
 
@@ -263,72 +258,7 @@ export const portfolioItems: PortfolioItem[] = [
         ],
       },
     ],
-  },
-  {
-    id: 4,
-    title: 'AI & AEO Research in Tourism',
-    category: 'Research',
-    categories: ['Research'],
-    timeline: '12/2025 - 05/2026',
-    role: 'Student Researcher | Finalist',
-    summary:
-      'Đề tài nghiên cứu tác động của review được tạo bởi AI đến niềm tin khách hàng và quyết định đặt phòng trong ngành du lịch Việt Nam.',
-    highlight:
-      'Case này cho thấy Vân An không chỉ mạnh về giao tiếp và vận hành, mà còn có năng lực đọc xu hướng công nghệ, phân tích hành vi người dùng và tư duy chiến lược dài hạn.',
-    accent: 'research',
-    metrics: [
-      { label: 'Trạng thái', value: 'Finalist' },
-      { label: 'Bối cảnh', value: 'Du lịch Việt Nam' },
-      { label: 'Địa bàn nghiên cứu', value: 'Đà Nẵng' },
-      { label: 'Trục phân tích', value: 'AI reviews & AEO' },
-    ],
-    skills: [
-      'Research framing',
-      'Consumer insight',
-      'AEO thinking',
-      'Trend analysis',
-      'Strategic marketing',
-      'Technology translation',
-    ],
-    proofPoints: [
-      'Đề tài: The Influence of AI-Generated Online Reviews on Consumer Trust and Booking Decisions in Vietnam’s Tourism Industry.',
-      'Tập trung phân tích niềm tin khách hàng khi AI tham gia tổng hợp và tái phân phối thông tin đánh giá.',
-      'Liên hệ trực tiếp với bài toán hiển thị thương hiệu trong Answer Engine Optimization.',
-    ],
-    mediaNote:
-      'Nên bổ sung infographic nghiên cứu, sơ đồ insight và 1 trang executive summary để phù hợp với nhà tuyển dụng khối hospitality và PR.',
-    star: [
-      {
-        title: 'Situation',
-        points: [
-          'Ngành du lịch đang chịu tác động ngày càng mạnh từ review do AI tạo ra và cách công cụ trả lời mới tổng hợp thông tin cho người dùng.',
-          'Niềm tin khách hàng và hành vi đặt phòng vì thế không còn phụ thuộc riêng vào OTA hoặc fanpage truyền thống.',
-        ],
-      },
-      {
-        title: 'Task',
-        points: [
-          'Làm rõ AI-generated reviews ảnh hưởng thế nào đến niềm tin và quyết định booking của người dùng Việt Nam.',
-          'Kết nối phát hiện nghiên cứu với góc nhìn ứng dụng cho thương hiệu du lịch và hospitality.',
-        ],
-      },
-      {
-        title: 'Action',
-        points: [
-          'Xây dựng đề tài nghiên cứu theo hướng kết hợp hành vi người tiêu dùng, niềm tin số và AEO.',
-          'Theo dõi cách AI tổng hợp dữ liệu đánh giá và ảnh hưởng tới khả năng hiển thị thương hiệu.',
-          'Diễn giải kết quả nghiên cứu theo ngôn ngữ có thể áp dụng cho marketing và quản trị thương hiệu.',
-        ],
-      },
-      {
-        title: 'Result',
-        points: [
-          'Đề tài trở thành một điểm nhấn học thuật giúp hồ sơ của Vân An nổi bật ở tư duy phân tích và cập nhật công nghệ.',
-          'Mở ra góc nhìn chiến lược cho các thương hiệu hospitality muốn xây niềm tin trong bối cảnh AI đang thay đổi hành vi tìm kiếm.',
-        ],
-      },
-    ],
-  },
+  }
 ]
 
 export const portfolioCategories = [

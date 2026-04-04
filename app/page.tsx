@@ -3,7 +3,6 @@ import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Hosting from '@/components/Hosting'
 import Marketing from '@/components/Marketing'
-import Research from '@/components/Research'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
       <About />
       <Hosting />
       <Marketing />
-      <Research />
       <Footer />
     </main>
   )
