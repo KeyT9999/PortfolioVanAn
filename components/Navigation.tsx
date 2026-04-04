@@ -28,13 +28,13 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
           
           {/* Desktop Menu */}
           <div className="hidden lg:flex gap-10 items-center font-serif text-lg tracking-tight">
-            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#home">Trang chủ</Link>
-            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#about">Về tôi</Link>
-            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#skill">Kỹ năng</Link>
+            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#home">Home</Link>
+            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#about">About Me</Link>
+            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#skill">Skills</Link>
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#marketing">Marketing</Link>
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/mc">MC</Link>
-            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#research">Nghiên cứu</Link>
-            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/cv">CV của tôi</Link>
+            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#research">Research</Link>
+            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/cv">My CV</Link>
           </div>
 
           {/* Action Button & Mobile Toggle */}
@@ -45,7 +45,7 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
                 className="flex flex-col leading-none transition-opacity duration-300 hover:opacity-70"
               >
                 <span className="font-label text-[11px] font-bold tracking-[0.08em] uppercase">
-                  Điện thoại
+                  Phone
                 </span>
                 <span className="mt-2 font-label text-sm font-medium tracking-[0.02em]">
                   0986 619 798
@@ -54,7 +54,7 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
             </div>
 
             <a href="https://www.facebook.com/vanan.nguyenthuy.1" target="_blank" rel="noopener noreferrer" className="hidden md:inline-block blue-shimmer text-[#011d45] px-8 py-2.5 rounded-sm font-bold tracking-wide text-sm scale-95 hover:scale-100 duration-200 ease-in-out">
-              Liên hệ
+              Contact
             </a>
             
             <button 
@@ -84,13 +84,13 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
           <span className="material-symbols-outlined text-4xl">close</span>
         </button>
 
-        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#home">Trang chủ</Link>
-        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#about">Về tôi</Link>
-        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#skill">Kỹ năng</Link>
+        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#home">Home</Link>
+        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#about">About Me</Link>
+        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#skill">Skills</Link>
         <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#marketing">Marketing</Link>
-        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/mc">Hồ sơ MC</Link>
-        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#research">Nghiên cứu</Link>
-        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/cv">CV của tôi</Link>
+        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/mc">MC</Link>
+        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#research">Research</Link>
+        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/cv">My CV</Link>
 
         <div className="flex flex-col items-center gap-5 pt-4 text-center">
           <a
@@ -104,7 +104,7 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
         
         <div className="pt-8 mt-8 border-t border-[#0a4275]/10 dark:border-white/10 w-2/3 text-center">
             <a onClick={() => setIsOpen(false)} href="https://www.facebook.com/vanan.nguyenthuy.1" target="_blank" rel="noopener noreferrer" className="blue-shimmer text-[#011d45] px-12 py-4 rounded-sm font-bold tracking-wide text-lg inline-block">
-            Liên hệ ngay
+            Get in Touch
             </a>
         </div>
       </div>

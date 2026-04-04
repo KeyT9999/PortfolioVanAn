@@ -28,7 +28,7 @@ export default function CVPage() {
         <section className="bg-surface-container-low py-20 lg:py-24 mb-20 lg:mb-24">
           <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
-              <div className="w-full lg:w-1/3 aspect-[3/4] overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
+              <div className="w-full lg:w-1/3 aspect-[3/4] overflow-hidden rounded-sm transition-all duration-700">
                 <img alt="Professional portrait of a host" className="w-full h-full object-cover" src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/501039028_1202355758252309_6343487756814000815_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFf5eSC-HbfiX90bvQUIJ5ApXXsBwFRTI-ldewHAVFMjyn8QJ7qFaYvuawSeaNBcVPaW9zkJQ3h2DMURQWwluFp&_nc_ohc=_AR6_ex9cw0Q7kNvwGAj2Li&_nc_oc=AdrfExCOSNumuqg1goiVGKroA3d6aVydGtg1NHf2Z5ADHqygDyuXRNI0H2zfY9n3l3w&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=nlUcIQf9-ounpOMZRESZKQ&_nc_ss=7a30f&oh=00_AfwNOHh9A86EfSm77-isN4QqOAqlPlrLNZqqw8pzmL0WZg&oe=69C28A9D"/>
               </div>
               <div className="w-full lg:w-2/3">

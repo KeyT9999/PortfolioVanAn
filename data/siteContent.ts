@@ -26,19 +26,39 @@ export interface ContactMethod {
   label: string
   value: string
   href?: string
+  icon?: string
   note?: string
+}
+
+export interface ExpertiseArea {
+  field: string
+  highlight: string
 }
 
 export const siteContent = {
   name: 'Vân An',
   shortName: 'VA',
   title: 'Professional Host & Strategic Marketer',
-  tagline: 'Multimedia Student | Professional Host | Strategic Marketer',
+  tagline: 'Multimedia Communications @ FPT University | Marketing Lead & Professional MC',
   motto: 'Where the heart is, there lies the treasure',
   intro:
     'Mang 4 năm bản lĩnh MC và tư duy quản trị F&B vào từng điểm chạm thương hiệu, Vân An theo đuổi triết lý hospitality-first: giao tiếp tử tế, xử lý linh hoạt và để lại niềm tin dài hạn.',
+  expertiseSummary: {
+    yearsIntro: '4+ năm kinh nghiệm trong lĩnh vực truyền thông và marketing',
+    fields: [
+      { field: 'Digital Marketing – Tiếp thị số', highlight: 'Xây dựng và thực thi chiến lược social media đa kênh' },
+      { field: 'Branding – Xây dựng thương hiệu', highlight: 'Định vị thương hiệu từ USP đến bộ nhận diện' },
+      { field: 'Content – Nội dung', highlight: 'Sản xuất nội dung đa định dạng, đạt 44.000–54.000 lượt xem' },
+      { field: 'Performance Marketing – Tiếp thị hiệu suất', highlight: 'Tăng trưởng 700M VNĐ doanh thu tháng đầu cho case F&B' },
+      { field: 'Professional Hosting – Dẫn chương trình', highlight: 'Hơn 50 sự kiện, quy mô lên đến 3.000+ khán giả' },
+    ] as ExpertiseArea[],
+  },
   careerObjective:
-    'Vững tin với triết lý “Trái tim ở đâu, kho báu ở đó”, Vân An hướng tới môi trường tiêu chuẩn 5 sao quốc tế với quyết tâm bứt phá thành nhân sự chính thức sau 3 tháng bằng sự chân thành, năng lực giải quyết vấn đề và khả năng lan tỏa thông điệp ý nghĩa. Trong 5 năm tới, mục tiêu là phát triển lên vai trò Trưởng phòng PR với cam kết góp phần gia tăng 20% mật độ tín nhiệm thương hiệu thông qua những kết nối đối ngoại bền vững.',
+    'Vững tin với triết lý "Trái tim ở đâu, kho báu ở đó", Vân An hướng tới môi trường tiêu chuẩn 5 sao quốc tế với quyết tâm bứt phá thành nhân sự chính thức sau 3 tháng bằng sự chân thành, năng lực giải quyết vấn đề và khả năng lan tỏa thông điệp ý nghĩa. Trong 5 năm tới, mục tiêu là phát triển lên vai trò Trưởng phòng PR với cam kết góp phần gia tăng 20% mật độ tín nhiệm thương hiệu thông qua những kết nối đối ngoại bền vững.',
+  careerObjectiveShort: {
+    shortTerm: 'Trong 2 năm tới, mình hướng đến vị trí Content Strategy Lead để dẫn dắt các chiến dịch sáng tạo cho thương hiệu tiêu dùng, kết hợp data-driven insight với storytelling có chiều sâu.',
+    longTerm: 'Trong 5 năm tới, phát triển lên vai trò Trưởng phòng Marketing/PR, đóng góp trực tiếp vào tăng trưởng thương hiệu bền vững và xây dựng hệ sinh thái truyền thông nội bộ hiệu quả.',
+  },
   story: [
     'Điểm mạnh của Vân An nằm ở sự giao thoa giữa ba vùng năng lực: bản lĩnh sân khấu của một MC, tư duy chiến lược của người làm marketing và sự tận tâm trong cách chăm sóc trải nghiệm con người.',
     'Thay vì xem truyền thông chỉ là nội dung đẹp, Vân An tiếp cận thương hiệu như một hệ sinh thái gồm cảm xúc, vận hành, dịch vụ và độ tin cậy. Đó cũng là lý do triết lý “hospitality-first” xuất hiện xuyên suốt trong cách làm việc.',
@@ -156,24 +176,29 @@ export const siteContent = {
   ],
   contactMethods: [
     {
-      label: 'Email chính thức',
-      value: 'Cần bổ sung email của Vân An trước khi public portfolio.',
-      note: 'Hiện mình chưa dùng lại email cũ để tránh hiển thị sai thông tin.',
-    },
-    {
       label: 'Số điện thoại',
-      value: 'Cần bổ sung số điện thoại liên hệ chính thức.',
-      note: 'Nên dùng số liên lạc dành riêng cho ứng tuyển và hợp tác.',
+      value: '0986 619 798',
+      href: 'tel:0986619798',
+      icon: 'phone',
     },
     {
-      label: 'CV PDF',
-      value: 'Upload CV Vân An vào thư mục public để gắn nút tải CV.',
-      note: 'Ví dụ: public/cv-van-an.pdf',
+      label: 'Email chuyên nghiệp',
+      value: 'nguyenthuyvanan05@gmail.com',
+      href: 'mailto:nguyenthuyvanan05@gmail.com',
+      icon: 'mail',
     },
     {
-      label: 'Drive sản phẩm',
-      value: 'Thêm link drive tổng hợp showreel, event photos, dashboard tăng trưởng và proposal mẫu.',
-      note: 'Ưu tiên 1 folder tổng có quyền xem công khai.',
+      label: 'LinkedIn',
+      value: 'Nguyễn Thuỳ Vân An',
+      href: 'https://www.linkedin.com/in/nguy%E1%BB%85n-thu%E1%BB%B3-v%C3%A2n-an-88108a30b/',
+      icon: 'link',
+    },
+    {
+      label: 'Portfolio Online',
+      value: 'Portfolio của Vân An',
+      href: 'http://localhost:3000/#about',
+      icon: 'open_in_new',
+      note: 'Xem phiên bản online của Portfolio Marketing.',
     },
   ] satisfies ContactMethod[],
 }

@@ -54,30 +54,21 @@ export default function Hosting() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-2 md:row-span-2 aspect-square md:aspect-auto overflow-hidden bg-surface-container-low">
-            <img alt="Vân An tại RESCONNECT 2025" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src={encodeURI('/RESCONNECT 2025/ChuHai-00464_Original.JPG')} />
+            <img alt="Vân An tại RESCONNECT 2025" className="w-full h-full object-cover transition-all duration-700" src={encodeURI('/RESCONNECT 2025/ChuHai-00464_Original.JPG')} />
           </div>
           <div className="aspect-square overflow-hidden bg-surface-container-low">
-            <img alt="MC Thảm đỏ Lễ Tôn Vinh" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src={encodeURI('/MC Thảm đỏ Lễ Tôn Vinh/IMG_3001.JPG')} />
+            <img alt="MC Thảm đỏ Lễ Tôn Vinh" className="w-full h-full object-cover transition-all duration-700" src={encodeURI('/MC Thảm đỏ Lễ Tôn Vinh/IMG_3001.JPG')} />
           </div>
           <div className="aspect-square overflow-hidden bg-surface-container-low">
-            <img alt="Biểu diễn nghệ thuật 20-11" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src={encodeURI('/Biểu diễn nghệ thuật 20-11/IMG_2134.JPG')} />
+            <img alt="Biểu diễn nghệ thuật 20-11" className="w-full h-full object-cover transition-all duration-700" src={encodeURI('/Biểu diễn nghệ thuật 20-11/IMG_2134.JPG')} />
           </div>
           <div className="lg:col-span-2 aspect-video md:aspect-auto overflow-hidden bg-surface-container-low">
-            <img alt="Open Mic Event" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src={encodeURI('/Open Mic_/ChuHai-00168_Original.JPG')} />
+            <img alt="Open Mic Event" className="w-full h-full object-cover transition-all duration-700" src={encodeURI('/Open Mic_/ChuHai-00168_Original.JPG')} />
           </div>
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="pb-48 px-6 md:px-12 max-w-[1920px] mx-auto text-center">
-        <div className="max-w-2xl mx-auto py-24 border-y border-outline-variant/15">
-          <h2 className="font-headline text-5xl mb-8">Sẵn sàng cho buổi trình diễn tiếp theo?</h2>
-          <p className="text-on-surface-variant mb-12">Sẵn sàng nhận lịch sự kiện doanh nghiệp, hội nghị, và các buổi lễ trang trọng trong và ngoài nước.</p>
-          <button className="blue-shimmer text-white px-12 py-4 rounded-sm font-semibold tracking-[0.1em] uppercase text-xs hover:shadow-xl transition-shadow">
-            Kiểm tra lịch trống
-          </button>
-        </div>
-      </div>
+
     </section>
   )
 }

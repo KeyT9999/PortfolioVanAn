@@ -7,7 +7,8 @@ interface CampaignSliderProps {
   label: string
   title: string
   description: string
-  facebookUrl: string
+  facebookUrl?: string
+  links?: { title: string; url: string }[]
 }
 
 export default function CampaignSlider({
@@ -16,6 +17,7 @@ export default function CampaignSlider({
   title,
   description,
   facebookUrl,
+  links,
 }: CampaignSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const touchStartX = useRef<number | null>(null)
@@ -106,17 +108,39 @@ export default function CampaignSlider({
       <div className="p-8 flex flex-col flex-1">
         <span className="font-label text-[10px] uppercase tracking-widest text-primary mb-2">{label}</span>
         <h4 className="font-headline text-xl mb-3">{title}</h4>
-        <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-6 flex-1">{description}</p>
-        <a
-          href={facebookUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest font-semibold group mt-auto"
-        >
-          <span className="material-symbols-outlined text-sm">open_in_new</span>
-          Xem trên Fanpage
-          <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
-        </a>
+        <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-4 flex-1">{description}</p>
+        
+        {links && links.length > 0 && (
+          <div className="mb-4">
+            <details className="group marker:content-['']">
+              <summary className="flex items-center gap-2 text-on-surface font-label text-[10px] uppercase tracking-widest font-semibold cursor-pointer select-none pb-2 border-b border-outline-variant/10">
+                <span className="material-symbols-outlined text-[14px] group-open:rotate-180 transition-transform">expand_more</span>
+                Xem {links.length} bài viết chiến dịch
+              </summary>
+              <div className="mt-2 flex flex-col gap-2 max-h-32 overflow-y-auto pr-2 custom-scrollbar">
+                {links.map((link, idx) => (
+                  <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="text-xs text-on-surface-variant hover:text-primary flex items-start gap-2 py-1">
+                    <span className="material-symbols-outlined text-[12px] mt-0.5 flex-shrink-0">open_in_new</span>
+                    <span className="leading-tight">{link.title}</span>
+                  </a>
+                ))}
+              </div>
+            </details>
+          </div>
+        )}
+
+        {facebookUrl && (
+          <a
+            href={facebookUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest font-semibold group mt-auto"
+          >
+            <span className="material-symbols-outlined text-sm">open_in_new</span>
+            Xem trên Fanpage
+            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+          </a>
+        )}
       </div>
     </div>
   )

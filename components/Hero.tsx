@@ -78,8 +78,8 @@ export default function Hero() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className={`object-cover transition-all duration-700 ease-in-out ${
                       activePortraitIndex === index
-                        ? 'opacity-100 scale-100 grayscale-0'
-                        : 'pointer-events-none opacity-0 scale-105 grayscale'
+                        ? 'opacity-100 scale-100'
+                        : 'pointer-events-none opacity-0 scale-105'
                     }`}
                   />
                 ))}

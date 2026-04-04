@@ -1,30 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
+import { siteContent } from '@/data/siteContent'
+
 export default function About() {
+  const { expertiseSummary, careerObjectiveShort, contactMethods } = siteContent
+
   return (
     <section id="about" className="max-w-[1920px] mx-auto px-12 py-24 mb-32">
-      {/* Hero Section: Intentional Asymmetry */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-32">
-        <div className="lg:col-span-7 relative">
-          <div className="font-label uppercase tracking-[0.2rem] text-primary mb-6">Triết lý của tôi</div>
-          <h1 className="font-headline text-6xl lg:text-8xl md:text-6xl text-on-surface leading-[1.1] tracking-tight">
-            Trái tim <br/> <span className="italic font-normal font-serif ml-12 md:ml-24">&amp; Trí tuệ</span>
-          </h1>
-          <div className="mt-16 max-w-xl">
-            <p className="text-xl md:text-2xl font-body font-light text-on-surface-variant leading-relaxed">
-              Sự giao thoa giữa sức hút tự nhiên và tư duy chiến lược. Mình tin rằng sự hiếu khách thực sự là một hành trình tiếp thị bằng cả trái tim.
-            </p>
-          </div>
-        </div>
-        <div className="lg:col-span-5 relative group">
-          <div className="aspect-[4/5] overflow-hidden rounded-sm bg-surface-container-high editorial-shadow p-2">
-            <img className="w-full h-full object-cover rounded-sm filter grayscale hover:grayscale-0 transition-all duration-700" src={encodeURI('/Ảnh đẹp để giới thiệu/quality_restoration_20250825190635597.JPEG')} alt="Vân An — Professional MC & Strategic Marketer" />
-          </div>
-          <div className="absolute -bottom-8 -left-8 bg-surface p-8 max-w-xs editorial-shadow border border-outline-variant/10">
-            <span className="material-symbols-outlined text-primary text-4xl mb-4">auto_awesome</span>
-            <p className="font-body text-sm text-on-surface-variant italic">&quot;A host's greatest tool is not their voice, but their ability to make every guest feel like the only person in the room.&quot;</p>
-          </div>
-        </div>
-      </div>
+
 
       {/* Vietnamese Introduction: Personal Letter */}
       <div className="bg-surface-container-low py-24 px-6 md:px-12 -mx-12 mb-32">
@@ -53,6 +35,28 @@ export default function About() {
             <span className="px-4 py-2 bg-surface-container-high rounded-sm text-xs font-label uppercase tracking-wider border border-outline-variant/15">F&amp;B Operations</span>
             <span className="px-4 py-2 bg-surface-container-high rounded-sm text-xs font-label uppercase tracking-wider border border-outline-variant/15">Event Hosting</span>
           </div>
+        </div>
+      </div>
+
+      {/* Expertise Summary: Lĩnh vực & Thành tích */}
+      <div className="mb-32">
+        <div className="text-center mb-16">
+          <span className="font-label uppercase tracking-[0.2rem] text-primary">Tóm tắt chuyên môn</span>
+          <h2 className="font-headline text-4xl mt-4 text-on-surface">Kinh nghiệm &amp; Lĩnh vực hoạt động</h2>
+          <p className="mt-4 font-body text-on-surface-variant text-lg max-w-2xl mx-auto">{expertiseSummary.yearsIntro}</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {expertiseSummary.fields.map((item, idx) => (
+            <div key={idx} className="bg-surface-container-low border border-outline-variant/10 rounded-sm p-8 hover:bg-surface-container-high transition-colors duration-300 group">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-1 h-full min-h-[2rem] bg-primary rounded-full flex-shrink-0 mt-1"></div>
+                <div>
+                  <h3 className="font-headline text-lg text-on-surface mb-2 leading-tight">{item.field}</h3>
+                  <p className="font-body text-sm text-on-surface-variant leading-relaxed group-hover:text-on-surface transition-colors duration-300">{item.highlight}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -86,68 +90,149 @@ export default function About() {
         </div>
       </div>
 
-      {/* Career Objective & Contact */}
+      {/* Career Objective: Ngắn hạn & Dài hạn & Liên hệ */}
       <div className="bg-surface-container-low py-24 px-6 md:px-12 -mx-12 mb-32">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="bg-surface-container-lowest p-10 rounded-sm border border-outline-variant/10">
-            <span className="material-symbols-outlined text-primary text-3xl mb-6">flag</span>
-            <h3 className="font-headline text-2xl mb-4">Mục tiêu ngắn hạn</h3>
-            <p className="font-body text-on-surface-variant leading-relaxed">
-              Trở thành nhân sự chính thức tại môi trường tiêu chuẩn 5 sao quốc tế trong 3 tháng, bằng sự chân thành, năng lực giải quyết vấn đề và khả năng lan tỏa thông điệp ý nghĩa.
-            </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="font-label uppercase tracking-[0.2rem] text-primary">Định hướng phát triển</span>
+            <h2 className="font-headline text-4xl mt-4 text-on-surface">Mục tiêu nghề nghiệp</h2>
           </div>
-          <div className="bg-surface-container-lowest p-10 rounded-sm border border-outline-variant/10">
-            <span className="material-symbols-outlined text-primary text-3xl mb-6">rocket_launch</span>
-            <h3 className="font-headline text-2xl mb-4">Mục tiêu dài hạn</h3>
-            <p className="font-body text-on-surface-variant leading-relaxed">
-              Trong 5 năm tới, phát triển lên vai trò Trưởng phòng PR với cam kết góp phần gia tăng 20% mật độ tín nhiệm thương hiệu thông qua những kết nối đối ngoại bền vững.
-            </p>
-          </div>
-          <div className="bg-surface-container-lowest p-10 rounded-sm border border-outline-variant/10">
-            <span className="material-symbols-outlined text-primary text-3xl mb-6">contact_page</span>
-            <h3 className="font-headline text-2xl mb-4">Liên hệ</h3>
-            <div className="space-y-4 font-body text-on-surface-variant">
-              <div className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-primary text-base">phone</span>
-                <a href="tel:0986619798" className="hover:text-primary transition-colors">0986 619 798</a>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Ngắn hạn */}
+            <div className="bg-surface-container-lowest p-10 rounded-sm border border-outline-variant/10 lg:col-span-1">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="material-symbols-outlined text-primary text-3xl">flag</span>
+                <h3 className="font-headline text-xl text-on-surface">Mục tiêu ngắn hạn</h3>
               </div>
-              <div className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-primary text-base">mail</span>
-                <a href="mailto:nguyenthuyvanan05@gmail.com" className="hover:text-primary transition-colors text-sm">nguyenthuyvanan05@gmail.com</a>
+              <div className="inline-block bg-primary/10 text-primary font-label text-xs uppercase tracking-wider px-3 py-1 rounded-sm mb-4">2 năm tới</div>
+              <p className="font-body text-on-surface-variant leading-relaxed">
+                {careerObjectiveShort.shortTerm}
+              </p>
+            </div>
+
+            {/* Dài hạn */}
+            <div className="bg-surface-container-lowest p-10 rounded-sm border border-outline-variant/10 lg:col-span-1">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+                <h3 className="font-headline text-xl text-on-surface">Mục tiêu dài hạn</h3>
               </div>
-              <div className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-primary text-base">link</span>
-                <a href="https://www.linkedin.com/in/nguy%E1%BB%85n-thu%E1%BB%B3-v%C3%A2n-an-88108a30b/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-sm">LinkedIn Profile</a>
+              <div className="inline-block bg-primary/10 text-primary font-label text-xs uppercase tracking-wider px-3 py-1 rounded-sm mb-4">5 năm tới</div>
+              <p className="font-body text-on-surface-variant leading-relaxed">
+                {careerObjectiveShort.longTerm}
+              </p>
+            </div>
+
+            {/* Thông tin liên hệ */}
+            <div className="bg-surface-container-lowest p-10 rounded-sm border border-outline-variant/10 lg:col-span-1">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="material-symbols-outlined text-primary text-3xl">contact_page</span>
+                <h3 className="font-headline text-xl text-on-surface">Thông tin liên hệ</h3>
+              </div>
+              <div className="space-y-4 font-body">
+                {contactMethods.map((method, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <span className="material-symbols-outlined text-primary text-base mt-0.5 flex-shrink-0">
+                      {method.icon ?? 'chevron_right'}
+                    </span>
+                    <div className="min-w-0">
+                      <div className="text-xs text-on-surface-variant/60 font-label uppercase tracking-wider mb-0.5">{method.label}</div>
+                      {method.href ? (
+                        <a
+                          href={method.href}
+                          target={method.href.startsWith('http') ? '_blank' : undefined}
+                          rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                          className="text-on-surface hover:text-primary transition-colors text-sm truncate block"
+                        >
+                          {method.value}
+                        </a>
+                      ) : (
+                        <span className="text-on-surface text-sm">{method.value}</span>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Values Section: Bento-ish Grid */}
+      {/* Skills Section */}
       <div id="skill" className="scroll-mt-32 py-16">
-        <div className="text-center mb-24">
-          <span className="font-label uppercase tracking-[0.2rem] text-primary">Cột trụ cốt lõi</span>
-          <h2 className="font-headline text-4xl mt-4">Nền tảng của sự xuất sắc</h2>
+        <div className="text-center mb-16">
+          <span className="font-label uppercase tracking-[0.2rem] text-primary">Expertise</span>
+          <h2 className="font-headline text-4xl mt-4 text-on-surface">Skills</h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="bg-surface-container-lowest p-12 rounded-sm border border-outline-variant/10 hover:bg-surface-container-high transition-colors duration-500">
-            <span className="material-symbols-outlined text-primary text-5xl mb-8">temp_preferences_custom</span>
-            <h3 className="font-headline text-2xl mb-4">Sự tập trung tinh tế</h3>
-            <p className="font-body text-on-surface-variant">Chú trọng những chi tiết tinh tế tạo nên trải nghiệm cao cấp — từ phục vụ thầm lặng đến đú́ng giờ chíánh xác.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+          {/* Communications */}
+          <div className="bg-surface-container-lowest border border-outline-variant/10 rounded-sm p-8 hover:bg-surface-container-high transition-colors duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="material-symbols-outlined text-primary text-2xl">mic</span>
+              <h3 className="font-headline text-lg text-on-surface tracking-wide uppercase">Communications</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {['Master of Ceremonies', 'Public Speaking', 'Brand Storytelling', 'Copywriting', 'Internal Documentation'].map((s) => (
+                <span key={s} className="px-3 py-1.5 bg-primary/8 text-on-surface font-body text-sm rounded-sm border border-outline-variant/15">{s}</span>
+              ))}
+            </div>
           </div>
-          <div className="bg-surface-container-lowest p-12 rounded-sm border border-outline-variant/10 hover:bg-surface-container-high transition-colors duration-500">
-            <span className="material-symbols-outlined text-primary text-5xl mb-8">gavel</span>
-            <h3 className="font-headline text-2xl mb-4">Ngoại giao tinh tế</h3>
-            <p className="font-body text-on-surface-variant">Diễu hành trong môi trường phức tạp với sự bình tĩnh và cướng dịu trong mọi tình huống đòi hỏi cao nhất.</p>
+
+          {/* Marketing */}
+          <div className="bg-surface-container-lowest border border-outline-variant/10 rounded-sm p-8 hover:bg-surface-container-high transition-colors duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="material-symbols-outlined text-primary text-2xl">trending_up</span>
+              <h3 className="font-headline text-lg text-on-surface tracking-wide uppercase">Marketing</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {['Content Strategy', 'Social Media Management', 'Campaign Planning', 'Community Building'].map((s) => (
+                <span key={s} className="px-3 py-1.5 bg-primary/8 text-on-surface font-body text-sm rounded-sm border border-outline-variant/15">{s}</span>
+              ))}
+            </div>
           </div>
-          <div className="bg-surface-container-lowest p-12 rounded-sm border border-outline-variant/10 hover:bg-surface-container-high transition-colors duration-500">
-            <span className="material-symbols-outlined text-primary text-5xl mb-8">lightbulb</span>
-            <h3 className="font-headline text-2xl mb-4">Tư duy chiến lược</h3>
-            <p className="font-body text-on-surface-variant">Mọi lời nói và hành động đều phục vụ mục tiêu lớn hơn, tạo nên sự đồng nhất thương hiệu liền mạch.</p>
+
+          {/* Hospitality */}
+          <div className="bg-surface-container-lowest border border-outline-variant/10 rounded-sm p-8 hover:bg-surface-container-high transition-colors duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="material-symbols-outlined text-primary text-2xl">hotel_class</span>
+              <h3 className="font-headline text-lg text-on-surface tracking-wide uppercase">Hospitality</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {['Guest Experience', 'Service Quality Training', 'B2B Client Management', 'Event Coordination'].map((s) => (
+                <span key={s} className="px-3 py-1.5 bg-primary/8 text-on-surface font-body text-sm rounded-sm border border-outline-variant/15">{s}</span>
+              ))}
+            </div>
           </div>
+
+          {/* Tools */}
+          <div className="bg-surface-container-lowest border border-outline-variant/10 rounded-sm p-8 hover:bg-surface-container-high transition-colors duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="material-symbols-outlined text-primary text-2xl">build</span>
+              <h3 className="font-headline text-lg text-on-surface tracking-wide uppercase">Tools</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {['Canva', 'Meta Business Suite', 'Microsoft Office', 'Zalo OA', 'Google Workspace'].map((s) => (
+                <span key={s} className="px-3 py-1.5 bg-primary/8 text-on-surface font-body text-sm rounded-sm border border-outline-variant/15">{s}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* Language */}
+          <div className="bg-surface-container-lowest border border-outline-variant/10 rounded-sm p-8 hover:bg-surface-container-high transition-colors duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="material-symbols-outlined text-primary text-2xl">language</span>
+              <h3 className="font-headline text-lg text-on-surface tracking-wide uppercase">Language</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {['Vietnamese (Native)', 'English (Fluent)'].map((s) => (
+                <span key={s} className="px-3 py-1.5 bg-primary/8 text-on-surface font-body text-sm rounded-sm border border-outline-variant/15">{s}</span>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
+
       
       {/* Signature Hospitality Quote */}
       <div className="py-48 bg-surface relative overflow-hidden flex justify-center items-center -mx-12 mt-16">

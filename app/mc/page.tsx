@@ -121,7 +121,7 @@ export default function MCPage() {
             <div key={index} className="group">
               <div className="aspect-[4/3] overflow-hidden mb-6 bg-[#fffae7]">
                 <img 
-                  className="w-full h-full object-cover grayscale md:hover:grayscale-0 transition-all duration-700 md:group-hover:scale-105" 
+                  className="w-full h-full object-cover transition-all duration-700 md:group-hover:scale-105" 
                   alt={project.title} 
                   src={project.image} 
                 />
