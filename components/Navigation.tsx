@@ -21,19 +21,19 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
   return (
     <>
       <nav className="fixed top-0 w-full z-40 bg-[#fffae7]/90 dark:bg-[#fffae7]/90 backdrop-blur-lg shadow-sm border-b border-blue-900/5 dark:border-white/5">
-        <div className="flex justify-between items-center px-6 md:px-12 py-6 max-w-[1920px] mx-auto">
+        <div className="flex justify-between items-center px-6 md:px-12 py-6 max-w-[1920px] mx-auto relative">
           <div className="font-serif italic font-bold text-2xl text-[#011d45] dark:text-[#011d45] z-50 relative">
             <Link href="/">{title}</Link>
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden lg:flex gap-10 items-center font-serif text-lg tracking-tight">
+          <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 gap-10 items-center font-serif text-lg tracking-tight">
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#home">Home</Link>
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#about">About Me</Link>
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#skill">Skills</Link>
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/#marketing">Marketing</Link>
             <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/mc">MC</Link>
-            <Link className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/cv">My CV</Link>
+            <a className="font-bold text-[#011d45] dark:text-[#011d45] opacity-80 hover:opacity-100 hover:text-[#011d45] transition-colors duration-300" href="/CV_NguyenThuyVanAn_Marketing.docx.pdf" target="_blank" rel="noopener noreferrer">My CV</a>
           </div>
 
           {/* Action Button & Mobile Toggle */}
@@ -84,7 +84,7 @@ export default function Navigation({ title = "Vân An" }: { title?: string }) {
         <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#skill">Skills</Link>
         <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/#marketing">Marketing</Link>
         <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/mc">MC</Link>
-        <Link onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/cv">My CV</Link>
+        <a onClick={() => setIsOpen(false)} className="font-bold text-[#011d45] dark:text-[#011d45] hover:text-[#011d45] transition-colors" href="/CV_NguyenThuyVanAn_Marketing.docx.pdf" target="_blank" rel="noopener noreferrer">My CV</a>
 
         <div className="flex flex-col items-center gap-5 pt-4 text-center">
           <a

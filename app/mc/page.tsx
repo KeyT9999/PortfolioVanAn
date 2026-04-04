@@ -35,7 +35,7 @@ export default function MCPage() {
           </div>
           <div className="lg:col-span-5 relative mt-16 lg:mt-0">
             <div className="aspect-[3/4] bg-[#fffae7] overflow-hidden rounded-sm">
-              <img className="w-full h-full object-cover" alt="Professional MC portrait" src={encodeURI('/Ảnh đẹp để giới thiệu/IMG_5511.JPG')}/>
+              <img className="w-full h-full object-cover" alt="Professional MC portrait" src={encodeURI('/Ảnh đẹp để giới thiệu/quality_restoration_20250825190635597(1).JPEG')}/>
             </div>
             <div className="absolute -bottom-8 lg:-bottom-8 left-0 lg:-left-8 p-6 lg:p-8 bg-[#fffae7] shadow-sm border border-[#d1c5b4]/10 max-w-[280px]">
               <p className="font-serif italic text-[#1c1c18] mb-2">Giá trị cốt lõi</p>
