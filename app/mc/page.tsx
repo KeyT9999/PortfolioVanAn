@@ -151,7 +151,7 @@ export default function MCPage() {
         <span className="font-label text-xs uppercase tracking-[0.4em] text-primary mb-6 block">Ready to Collaborate?</span>
         <h2 className="font-serif text-5xl md:text-6xl mb-12">Hãy cùng tạo nên những <br/><span className="italic font-normal">khoảnh khắc đáng nhớ.</span></h2>
         <a href="https://www.facebook.com/vanan.nguyenthuy.1" target="_blank" rel="noopener noreferrer" className="blue-shimmer inline-block text-white px-12 py-4 rounded-sm font-semibold tracking-widest text-sm hover:opacity-90 transition-all transform hover:-translate-y-1">
-          LIÊN HỆ ĐẶT LỊCH NGAY
+          Để Vân An được lắng nghe câu chuyện của bạn. 
         </a>
       </section>
       
