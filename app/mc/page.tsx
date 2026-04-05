@@ -12,8 +12,8 @@ export default function MCPage() {
       <Navigation title="MC Vân An" />
 
       {/* Section 1: Intro */}
-      <section className="px-6 md:px-12 lg:px-24 mb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+      <section className="px-6 md:px-12 lg:px-24 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
             <span className="font-label text-xs uppercase tracking-[0.3em] text-[#0a4275] mb-6 block">The Curated Host</span>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#1c1c18] leading-tight mb-8">
@@ -49,7 +49,7 @@ export default function MCPage() {
       </section>
 
       {/* Section 2: Personal Info & Education */}
-      <section className="bg-[#fffae7] py-32 px-6 md:px-12 lg:px-24">
+      <section className="bg-[#fffae7] py-8 mb-8 px-6 md:px-12 lg:px-24">
         <div className="max-w-screen-2xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div>
@@ -107,7 +107,7 @@ export default function MCPage() {
       </section>
 
       {/* Section 3: Projects Showcase (Updated to 12 projects) */}
-      <section className="py-32 px-6 md:px-12 lg:px-24 max-w-screen-2xl mx-auto">
+      <section className="py-8 mb-8 px-6 md:px-12 lg:px-24 max-w-screen-2xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 lg:mb-20 gap-8">
           <div>
             <span className="font-label text-xs uppercase tracking-[0.3em] text-[#0a4275] mb-4 block">Portfolio</span>
@@ -139,7 +139,7 @@ export default function MCPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 lg:py-32 bg-[#fffae7] text-[#1c1c18] text-center px-6">
+      <section className="py-8 bg-[#fffae7] text-[#1c1c18] text-center px-6">
         <span className="font-label text-xs uppercase tracking-[0.4em] text-primary mb-6 block">Ready to Collaborate?</span>
         <h2 className="font-serif text-5xl md:text-6xl mb-12">Hãy cùng tạo nên những <br/><span className="italic font-normal">khoảnh khắc đáng nhớ.</span></h2>
         <a href="https://www.facebook.com/vanan.nguyenthuy.1" target="_blank" rel="noopener noreferrer" className="blue-shimmer inline-block text-white px-12 py-4 rounded-sm font-semibold tracking-widest text-sm hover:opacity-90 transition-all transform hover:-translate-y-1">
