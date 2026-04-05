@@ -48,8 +48,9 @@ const projects = [
     image: '/VAN/z7693913991422_104b2ffd832cc40e408a1e08a4d273fc.jpg',
     imageAlt: 'Thumbnail Review Sách',
     metrics: [
-      { value: '1', label: 'Sản phẩm video' },
-      { value: 'Đọc', label: 'Văn hóa đọc' },
+      { value: '99K', label: 'Lượt xem organic sau 3 ngày' },
+      { value: '588', label: 'Lượt like' },
+      { value: '0đ', label: 'Ngân sách quảng cáo' },
     ],
     icon: 'menu_book',
     accentColor: 'border-primary/50',
