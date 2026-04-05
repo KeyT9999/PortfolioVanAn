@@ -66,9 +66,9 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             <div className="space-y-12">
               <div className="space-y-4">
-                <h2 className="font-headline text-3xl text-on-surface">Sức hút của người dẫn chương trình</h2>
+                <h2 className="font-headline text-3xl text-on-surface">Người Kết Nối</h2>
                 <p className="font-body text-lg text-on-surface-variant leading-relaxed">
-                  Điều hành sân khấu không chỉ dựa vào câu chữ — mà ở khả năng cảm nhận năng lượng của khán giả. Cách tiếp cận của mình kết hợp sự ấm áp của người lễ tân với bản lĩnh của người ngoại giao, đảm bảo mỗi sự kiện là một trải nghiệm đáng nhớ.
+                  Với Vân An, cầm mic không chỉ để nói, mà là để lắng nghe nhịp đập của khán giả. Suốt 4 năm qua, từ những sân khấu nhỏ đến cơ hội được đồng hành từ 700 - 3.000 khán giả, tôi học được rằng: sức nặng của một người MC không nằm ở âm lượng, mà ở khả năng thấu cảm. Tôi luôn nỗ lực giữ cho mình sự điềm tĩnh và ấm áp, để mỗi sự kiện không chỉ là một kịch bản trôi chảy, mà là một không gian nơi mọi người tìm thấy sự kết nối thực sự.
                 </p>
               </div>
               <div className="space-y-4">
@@ -79,8 +79,8 @@ export default function About() {
               </div>
             </div>
             <div className="relative pt-12 md:pt-24 hidden md:block">
-              <div className="aspect-square bg-surface-container-highest rounded-sm p-4 rotate-3 editorial-shadow">
-                <img className="w-full h-full object-cover" src={encodeURI('/RESCONNECT 2025/ChuHai-00769_Original.JPG')} alt="Vân An tại sự kiện RESCONNECT 2025" />
+              <div className="bg-surface-container-highest rounded-sm p-3 md:p-4 rotate-3 editorial-shadow">
+                <img className="w-full h-auto rounded-sm drop-shadow-sm" src={encodeURI('/Ảnh đẹp để giới thiệu/quality_restoration_20250825215953064.JPEG')} alt="Vân An - Người Kết Nối" />
               </div>
               <div className="absolute top-0 right-0 p-12 bg-surface text-on-surface font-headline italic text-2xl -mr-12 border border-outline-variant/15">
                 Hospitality-first <br/> Diplomacy
@@ -198,7 +198,7 @@ export default function About() {
               <h3 className="font-headline text-lg text-on-surface tracking-wide uppercase">Hospitality</h3>
             </div>
             <div className="flex flex-wrap gap-2">
-              {['Guest Experience', 'Service Quality Training', 'B2B Client Management', 'Event Coordination'].map((s) => (
+              {['Guest Experience', 'Service Quality Training', 'B2C Client Management', 'Event Coordination'].map((s) => (
                 <span key={s} className="px-3 py-1.5 bg-primary/8 text-on-surface font-body text-sm rounded-sm border border-outline-variant/15">{s}</span>
               ))}
             </div>
@@ -235,17 +235,18 @@ export default function About() {
 
       
       {/* Signature Hospitality Quote */}
-      <div className="py-48 bg-surface relative overflow-hidden flex justify-center items-center -mx-12 mt-16">
+      <div className="py-16 bg-surface relative overflow-hidden flex justify-center items-center -mx-12 mt-8">
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="w-full h-full" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, #0a4275 1px, transparent 0)", backgroundSize: "40px 40px" }}></div>
         </div>
         <div className="relative z-10 max-w-4xl text-center px-6">
           <span className="material-symbols-outlined text-primary text-3xl mb-8" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
           <blockquote className="font-headline text-3xl md:text-5xl leading-tight text-on-surface italic">
-              &quot;True hospitality is found at the intersection of where the heart meets the intellect.&quot;
+              &quot;Either way, mental strength is not just hoping that nothing ever goes wrong. It is believing that we have the capacity to handle it if it does.&quot;
           </blockquote>
-          <div className="mt-12 h-[1px] w-24 bg-primary mx-auto opacity-30"></div>
-          <cite className="mt-8 block font-label uppercase tracking-widest text-sm text-on-surface-variant not-italic">Phương châm sống</cite>
+          <cite className="mt-8 block font-label tracking-widest text-lg text-on-surface-variant not-italic">— Brianna Wiest</cite>
+          <div className="mt-8 h-[1px] w-24 bg-primary mx-auto opacity-30"></div>
+          <cite className="mt-8 block font-label uppercase tracking-widest text-sm text-primary not-italic">Phương châm sống</cite>
         </div>
       </div>
     </section>

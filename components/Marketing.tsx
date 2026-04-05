@@ -59,7 +59,7 @@ const projects = [
 
 export default function Marketing() {
   return (
-    <section id="marketing" className="pt-32 pb-8 mb-8 max-w-[1920px] mx-auto px-6 md:px-12">
+    <section id="marketing" className="pt-8 pb-8 mb-8 max-w-[1920px] mx-auto px-6 md:px-12">
       {/* Section Header */}
       <div className="mb-20">
         <span className="font-label uppercase tracking-[0.2rem] text-primary text-xs mb-4 block">

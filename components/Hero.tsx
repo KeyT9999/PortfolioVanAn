@@ -47,7 +47,7 @@ export default function Hero() {
               Xem dự án của tôi
             </button>
             <a 
-              href="/CVVANAN.pdf"
+              href="/CV_NguyenThuyVanAn_Marketing.docx.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-center border border-outline-variant/30 text-on-surface px-10 py-4 rounded-sm font-label font-semibold text-sm tracking-widest uppercase hover:bg-surface-container-high transition-all duration-300"
