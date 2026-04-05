@@ -37,6 +37,23 @@ const projects = [
     icon: 'movie',
     accentColor: 'border-primary/70',
   },
+  {
+    slug: 'review-sach',
+    label: 'Dự án mới · Tự do',
+    category: 'Content Creator · Video Production',
+    title: 'Review Sách',
+    subtitle: 'Video Content & Review',
+    summary:
+      'Sản xuất và chia sẻ video review sách ý nghĩa, lan tỏa văn hóa đọc qua lăng kính cá nhân.',
+    image: '/VAN/z7693913991422_104b2ffd832cc40e408a1e08a4d273fc.jpg',
+    imageAlt: 'Thumbnail Review Sách',
+    metrics: [
+      { value: '1', label: 'Sản phẩm video' },
+      { value: 'Đọc', label: 'Văn hóa đọc' },
+    ],
+    icon: 'menu_book',
+    accentColor: 'border-primary/50',
+  },
 ]
 
 export default function Marketing() {
