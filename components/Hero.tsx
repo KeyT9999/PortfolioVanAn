@@ -24,7 +24,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col justify-center pt-24 overflow-hidden mb-32">
+    <section id="home" className="relative min-h-screen flex flex-col justify-center pt-24 overflow-hidden mb-8">
       {/* Asymmetrical Grid Container */}
       <div className="max-w-[1920px] mx-auto w-full px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Content Column */}

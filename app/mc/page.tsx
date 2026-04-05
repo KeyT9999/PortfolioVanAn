@@ -20,16 +20,24 @@ export default function MCPage() {
               MC <span className="italic font-normal">VÂN AN</span>
             </h1>
             <div className="max-w-xl space-y-6 text-[#4e4639] leading-relaxed text-lg">
-              <p className="font-serif italic text-2xl text-[#1c1c18]">"Kính chào Quý Đối tác và Quý Anh Chị,"</p>
+              <p className="font-serif italic text-2xl text-[#1c1c18]">"Kính chào Quý Đối tác và Quý Anh Chị, tôi là Vân An."</p>
               <p>
-                MC được đào tạo nền tảng truyền thông, tập trung kết nối cảm xúc, truyền tải thông điệp tinh tế. Tôi tin rằng mỗi sân khấu là một câu chuyện cần được kể bằng cả sự chân thành và chuyên nghiệp.
+                Với Vân An, nghề cầm mic không chỉ là công việc, mà là sứ mệnh của một "người kết nối". Vì An hiểu, mỗi sự kiện đều mang một linh hồn riêng, một câu chuyện riêng cần được khơi gợi bằng sự chân thành.
+              </p>
+              <p>
+                Với nền tảng từ ngành Truyền thông và được đào tạo bài bản tại Học Viện Đào Tạo Kỹ Năng Nghệ Thuật ABC Entertainment, An luôn ưu tiên sự linh hoạt để xử lý mọi tình huống nhưng vẫn giữ trọn "mạch cảm xúc" cho khán giả. Sự chỉn chu và thấu đáo chính là cách An đồng hành để giúp sự kiện của bạn tỏa sáng một cách trọn vẹn nhất.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Hội thảo</span>
+                <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Hội nghị</span>
                 <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Gala</span>
+                <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Ký kết</span>
                 <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Vinh danh</span>
+                <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Nghệ thuật</span>
                 <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Tọa đàm</span>
-                <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Host đêm nhạc</span>
+                <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Đại hội</span>
+                <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Host</span>
+                <span className="px-4 py-1 border border-[#d1c5b4]/30 text-xs font-label uppercase tracking-widest">Đêm nhạc</span>
               </div>
             </div>
           </div>

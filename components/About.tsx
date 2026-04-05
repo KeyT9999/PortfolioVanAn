@@ -5,11 +5,11 @@ export default function About() {
   const { expertiseSummary, careerObjectiveShort, contactMethods } = siteContent
 
   return (
-    <section id="about" className="max-w-[1920px] mx-auto px-12 py-24 mb-32">
+    <section id="about" className="max-w-[1920px] mx-auto px-12 py-8 mb-8">
 
 
       {/* Vietnamese Introduction: Personal Letter */}
-      <div className="bg-surface-container-low py-24 px-6 md:px-12 -mx-12 mb-32">
+      <div className="bg-surface-container-low py-8 px-6 md:px-12 -mx-12 mb-8">
         <div className="max-w-4xl mx-auto">
           <div className="border-l-2 border-primary pl-8 md:pl-12">
             <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary mb-6 block">Lời giới thiệu</span>
@@ -39,7 +39,7 @@ export default function About() {
       </div>
 
       {/* Expertise Summary: Lĩnh vực & Thành tích */}
-      <div className="mb-32">
+      <div className="mb-8">
         <div className="text-center mb-16">
           <span className="font-label uppercase tracking-[0.2rem] text-primary">Tóm tắt chuyên môn</span>
           <h2 className="font-headline text-4xl mt-4 text-on-surface">Kinh nghiệm &amp; Lĩnh vực hoạt động</h2>
@@ -61,7 +61,7 @@ export default function About() {
       </div>
 
       {/* Narrative Section: Tonal Layering */}
-      <div className="bg-surface py-32 px-6 md:px-12 -mx-12 mb-32">
+      <div className="bg-surface py-8 px-6 md:px-12 -mx-12 mb-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             <div className="space-y-12">
@@ -91,7 +91,7 @@ export default function About() {
       </div>
 
       {/* Career Objective: Ngắn hạn & Dài hạn & Liên hệ */}
-      <div className="bg-surface-container-low py-24 px-6 md:px-12 -mx-12 mb-32">
+      <div className="bg-surface-container-low py-8 px-6 md:px-12 -mx-12 mb-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="font-label uppercase tracking-[0.2rem] text-primary">Định hướng phát triển</span>

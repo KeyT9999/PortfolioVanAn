@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 export default function Hosting() {
   return (
-    <section id="hosting" className="pt-32 mb-32">
+    <section id="hosting" className="pt-32 mb-8">
       {/* Hero Section: Mastery Statement */}
-      <div className="px-6 md:px-12 mb-32 max-w-[1920px] mx-auto">
+      <div className="px-6 md:px-12 mb-8 max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-8">
             <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary mb-4 block">Bản lĩnh sân khấu</span>
@@ -20,7 +20,7 @@ export default function Hosting() {
       </div>
 
       {/* Metric Highlights */}
-      <div className="bg-surface-container-low py-24 mb-32">
+      <div className="bg-surface-container-low py-8 mb-8">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 md:gap-12">
             <div className="text-center md:text-left">
@@ -42,7 +42,7 @@ export default function Hosting() {
 
 
       {/* Gallery Grid */}
-      <div className="py-16 px-6 md:px-12 max-w-[1920px] mx-auto mb-32">
+      <div className="py-8 px-6 md:px-12 max-w-[1920px] mx-auto mb-8">
         <div className="mb-16 flex justify-between items-end">
           <div>
             <span className="font-label text-xs uppercase tracking-[0.2rem] text-primary mb-4 block">Kho lưu trữ</span>
